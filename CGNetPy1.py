@@ -87,7 +87,7 @@ class _FGlo(nn.Module):
         out = self.gap(x)
         out = out.view(n, c)
         out = self.fc(out).view(n, c, 1, 1)
-        print(x.shape, out.shape)
+        #print(x.shape, out.shape)
         #out = torch.mul(x, out)
         #out = x * out
         #return out
@@ -145,6 +145,9 @@ class CGNet(nn.Module):
 
     def __init__(self, nclass=1, dropout_rate=0.2, backbone='', aux=False, jpu=False, pretrained_base=True, M=3, N=21, **kwargs):
         super(CGNet, self).__init__()
+        #stage 0 
+        self.stage0 = nn.MaxPool2d(kernel_size=(2,2), stride=2, padding=0)
+
         # stage 1
         self.stage1_0 = _ConvBNLeakyReLU(3, 32, 3, 2, 1, **kwargs)
         self.stage1_1 = _ConvBNLeakyReLU(32, 32, 3, 1, 1, **kwargs)
@@ -197,7 +200,11 @@ class CGNet(nn.Module):
         #print("CGNet initialised")
 
     def forward(self, x):
+        # stage0
         size = x.size()[2:]
+        #print(x.shape)
+        x = self.stage0(x)
+        #print(x.shape)        
         # stage1
         out0 = self.stage1_0(x)
         out0 = self.stage1_1(out0)

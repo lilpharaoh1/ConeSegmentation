@@ -1,0 +1,28 @@
+{
+    "lib": "libvart-dpu-runner.so",
+    "filename": "CGNet_bad_and_wrong.xmodel",
+    "kernel": [
+        "subgraph_CGNet__CGNet_ContextGuidedBlock_stage2_3__9012",
+        "subgraph_CGNet__CGNet_ContextGuidedBlock_stage3_1__input_103",
+        "subgraph_CGNet__CGNet_ContextGuidedBlock_stage3_2__input_115",
+        "subgraph_CGNet__CGNet_ContextGuidedBlock_stage3_3__input_127",
+        "subgraph_CGNet__CGNet_ContextGuidedBlock_stage3_4__input_139",
+        "subgraph_CGNet__CGNet_ContextGuidedBlock_stage3_5__input_151",
+        "subgraph_CGNet__CGNet_ContextGuidedBlock_stage3_6__input_163",
+        "subgraph_CGNet__CGNet_ContextGuidedBlock_stage3_7__input_175",
+        "subgraph_CGNet__CGNet_ContextGuidedBlock_stage3_8__input_187",
+        "subgraph_CGNet__CGNet_ContextGuidedBlock_stage2_0___ChannelWiseConv_f_loc__Conv2d_conv__8721",
+        "subgraph_CGNet__CGNet_ContextGuidedBlock_stage3_10___ChannelWiseConv_f_loc__Conv2d_conv__9887",
+        "subgraph_CGNet__CGNet_ContextGuidedBlock_stage3_10__input_211",
+        "subgraph_CGNet__CGNet_ContextGuidedBlock_stage3_11__input_223",
+        "subgraph_CGNet__CGNet_ContextGuidedBlock_stage3_12__input_235",
+        "subgraph_CGNet__CGNet_ContextGuidedBlock_stage3_13__input_247",
+        "subgraph_CGNet__CGNet_ContextGuidedBlock_stage3_14__input_259",
+        "subgraph_CGNet__CGNet_ContextGuidedBlock_stage3_15__10320",
+        "subgraph_CGNet__CGNet_ContextGuidedBlock_stage2_1__input_49",
+        "subgraph_CGNet__CGNet_ContextGuidedBlock_stage3_0__Conv2d_reduce__input_91",
+        "subgraph_CGNet__CGNet_ContextGuidedBlock_stage2_2__input_61",
+        "subgraph_CGNet__CGNet_ContextGuidedBlock_stage2_0__Conv2d_reduce__input_37"
+    ],
+    "target": "DPUCZDX8G_ISA1_B4096"
+}

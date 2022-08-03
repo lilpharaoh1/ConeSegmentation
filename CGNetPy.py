@@ -18,7 +18,7 @@ class ContextGuidedBlock(nn.Module):
         self.f_loc = _ChannelWiseConv(inter_channels, inter_channels, **kwargs)
         self.f_sur = _ChannelWiseConv(inter_channels, inter_channels, dilation, **kwargs)
         self.bn = norm_layer(inter_channels * 2)
-        self.prelu = nn.PReLU(inter_channels * 2)
+        self.prelu = nn.LeakyReLU(inter_channels * 2)
         self.f_glo = _FGlo(out_channels, reduction, **kwargs)
         self.down = down
         self.residual = residual
@@ -43,7 +43,7 @@ class _ConcatInjection(nn.Module):
     def __init__(self, in_channels, norm_layer=nn.BatchNorm2d, **kwargs):
         super(_ConcatInjection, self).__init__()
         self.bn = norm_layer(in_channels)
-        self.prelu = nn.PReLU(in_channels)
+        self.prelu = nn.LeakyReLU(in_channels)
 
     def forward(self, x1, x2):
         out = torch.cat([x1, x2], dim=1)
@@ -94,7 +94,7 @@ class _ConvBNPReLU(nn.Module):
         super(_ConvBNPReLU, self).__init__()
         self.conv = nn.Conv2d(in_channels, out_channels, kernel_size, stride, padding, dilation, groups, bias=False)
         self.bn = norm_layer(out_channels)
-        self.prelu = nn.PReLU(out_channels)
+        self.prelu = nn.LeakyReLU(out_channels)
 
     def forward(self, x):
         x = self.conv(x)
@@ -106,7 +106,7 @@ class _BNPReLU(nn.Module):
     def __init__(self, out_channels, norm_layer=nn.BatchNorm2d, **kwargs):
         super(_BNPReLU, self).__init__()
         self.bn = norm_layer(out_channels)
-        self.prelu = nn.PReLU(out_channels)
+        self.prelu = nn.LeakyReLU(out_channels)
 
     def forward(self, x):
         x = self.bn(x)
@@ -176,11 +176,17 @@ class CGNet(nn.Module):
 
         # stage 2
         out0_cat = self.bn_prelu1(torch.cat([out0, inp1], dim=1))
+        
+        print(out0_cat)
+        print(if nan in out0_cat)
+
         out1_0 = self.stage2_0(out0_cat)
         out1 = out1_0
         for layer in self.stage2:
             out1 = layer(out1)
         out1_cat = self.bn_prelu2(torch.cat([out1, out1_0, inp2], dim=1))
+
+        print(out1_cat)
 
         # stage 3
         out2_0 = self.stage3_0(out1_cat)
@@ -189,9 +195,12 @@ class CGNet(nn.Module):
             out2 = layer(out2)
         out2_cat = self.bn_prelu3(torch.cat([out2_0, out2], dim=1))
 
+        print(out2_cat)
+
         out = self.head(out2_cat)
         out = F.interpolate(out, size, mode='bilinear', align_corners=True)
-        out = torch.sigmoid(out)
+        
+        print(out)
 
         return out
 

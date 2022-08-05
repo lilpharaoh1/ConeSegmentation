@@ -1,29 +1,8 @@
 {
     "lib": "libvart-dpu-runner.so",
-    "filename": "CGNet_bad_and_wrong.xmodel",
+    "filename": "SimpleNet.xmodel",
     "kernel": [
-        "subgraph_CGNet__CGNet_ContextGuidedBlock_stage3_13___FGlo_f_glo__14072",
-        "subgraph_CGNet__CGNet_ContextGuidedBlock_stage3_12___FGlo_f_glo__13950",
-        "subgraph_CGNet__CGNet_ContextGuidedBlock_stage3_7___FGlo_f_glo__13340",
-        "subgraph_CGNet__CGNet_ContextGuidedBlock_stage3_5___FGlo_f_glo__13096",
-        "subgraph_CGNet__CGNet_ContextGuidedBlock_stage3_6___FGlo_f_glo__13218",
-        "subgraph_CGNet__CGNet_ContextGuidedBlock_stage3_4___FGlo_f_glo__12974",
-        "subgraph_CGNet__CGNet_ContextGuidedBlock_stage3_2___FGlo_f_glo__12730",
-        "subgraph_CGNet__CGNet_ContextGuidedBlock_stage3_3___FGlo_f_glo__12852",
-        "subgraph_CGNet__CGNet_ContextGuidedBlock_stage2_3__12338",
-        "subgraph_CGNet__CGNet_ContextGuidedBlock_stage2_2___FGlo_f_glo__12214",
-        "subgraph_CGNet__CGNet_ContextGuidedBlock_stage2_1___FGlo_f_glo__12092",
-        "subgraph_CGNet__CGNet_ContextGuidedBlock_stage2_0___FGlo_f_glo__Sequential_fc__Hardsigmoid_3__11967_i0(MoveReshape)(MergeMultoHsigmoid)",
-        "subgraph_CGNet__CGNet_ContextGuidedBlock_stage2_0__Conv2d_reduce__input_37",
-        "subgraph_CGNet__CGNet_ContextGuidedBlock_stage2_0___ChannelWiseConv_f_loc__Conv2d_conv__11879",
-        "subgraph_CGNet__CGNet_ContextGuidedBlock_stage3_1___FGlo_f_glo__12608",
-        "subgraph_CGNet__CGNet_ContextGuidedBlock_stage3_0__Conv2d_reduce__input_131",
-        "subgraph_CGNet__CGNet_ContextGuidedBlock_stage3_10___FGlo_f_glo__13706",
-        "subgraph_CGNet__CGNet_ContextGuidedBlock_stage3_14___FGlo_f_glo__14194",
-        "subgraph_CGNet__CGNet_ContextGuidedBlock_stage3_8___FGlo_f_glo__13462",
-        "subgraph_CGNet__CGNet_ContextGuidedBlock_stage3_10___ChannelWiseConv_f_loc__Conv2d_conv__13633",
-        "subgraph_CGNet__CGNet_ContextGuidedBlock_stage3_15__14318",
-        "subgraph_CGNet__CGNet_ContextGuidedBlock_stage3_11___FGlo_f_glo__13828"
+        "subgraph_SimpleNet__SimpleNet_Conv2d_stage2__input_11"
     ],
     "target": "DPUCZDX8G_ISA1_B4096"
 }

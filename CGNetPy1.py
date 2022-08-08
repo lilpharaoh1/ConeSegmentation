@@ -262,5 +262,5 @@ class CGNet(nn.Module):
         #out = torch.sigmoid(out)
         #print(out)
 
-        return out2_cat
+        return out
 

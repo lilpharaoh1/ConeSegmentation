@@ -256,7 +256,7 @@ class CGNet(nn.Module):
 #           out2 = layer(out2)
         out2_cat = self.bn_leakyrelu3(torch.cat([out2_0, out2], dim=1))
 
-        #out = self.head(out2_cat)
+        out = self.head(out2_cat)
         
         #out = F.interpolate(out, size, mode='bilinear', align_corners=False)
         #out = torch.sigmoid(out)

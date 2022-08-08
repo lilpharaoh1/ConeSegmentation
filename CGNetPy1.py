@@ -152,7 +152,8 @@ class CGNet(nn.Module):
     def __init__(self, nclass=1, dropout_rate=0.2, backbone='', aux=False, jpu=False, pretrained_base=True, M=3, N=21, **kwargs):
         super(CGNet, self).__init__()
         #stage 0 
-        self.stage0 = nn.MaxPool2d(kernel_size=(2,2), stride=2, padding=0)
+        self.stage0_0 = nn.AvgPool2d(kernel_size=(2,2), stride=2, padding=0)
+        self.stage0_1 = nn.MaxPool2d(kernel_size=(2,2), stride=2, padding=0)
 
         # stage 1
         self.stage1_0 = _ConvBNLeakyReLU(3, 32, 3, 2, 1, **kwargs)
@@ -209,7 +210,8 @@ class CGNet(nn.Module):
         # stage0
         size = x.size()[2:]
         #print(x.shape)
-        x = self.stage0(x)
+        x = self.stage0_0(x)
+        x = self.stage0_1(x)
         #print(x.shape)        
         # stage1
         out0 = self.stage1_0(x)

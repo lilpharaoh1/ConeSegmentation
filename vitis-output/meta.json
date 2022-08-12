@@ -1,8 +1,8 @@
 {
     "lib": "libvart-dpu-runner.so",
-    "filename": "SimpleNet.xmodel",
+    "filename": "CGNet_wrong.xmodel",
     "kernel": [
-        "subgraph_SimpleNet__SimpleNet_Conv2d_stage2__input_11"
+        "subgraph_CGNet__CGNet_AvgPool2d_stage0_0__14561_i0"
     ],
     "target": "DPUCZDX8G_ISA1_B4096"
 }

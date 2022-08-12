@@ -2,7 +2,7 @@
     "lib": "libvart-dpu-runner.so",
     "filename": "SimpleNet.xmodel",
     "kernel": [
-        "subgraph_SimpleNet__SimpleNet_227"
+        "subgraph_SimpleNet__SimpleNet_44"
     ],
-    "target": "DPUCZDX8G_ISA1_B4096"
+    "target": "DPUCZDX8G_ISA0_B4096_MAX_BG2"
 }

@@ -170,6 +170,18 @@ class _BNLeakyReLU(nn.Module):
         # x = nn.functional.leaky_relu(x, 0.1)
         return x
 
+class _BNLeakyReLULast(nn.Module):
+    def __init__(self, out_channels, norm_layer=nn.BatchNorm2d, **kwargs):
+        super(_BNLeakyReLULast, self).__init__()
+        self.bn = norm_layer(out_channels)
+        self.leakyrelu = nn.ReLU(True)#nn.LeakyReLU(0.1)#out_channels)
+
+    def forward(self, x):
+        x = self.bn(x)
+        x = self.leakyrelu(x) # TODO : FIX THIS
+        # x = nn.functional.leaky_relu(x, 0.1)
+        return x
+
 class CGNet(nn.Module):
     r"""CGNet
     Parameters
@@ -270,10 +282,10 @@ class CGNet(nn.Module):
         out1 = self.stage2_1(out1)
         out1 = self.stage2_2(out1)
         out1 = self.stage2_3(out1)
-        # out1 = self.stage2(out1)
-        # #for layer in self.stage2:
-        #     #out1 = layer(out1)
-        #     #break
+        # # out1 = self.stage2(out1)
+        # # #for layer in self.stage2:
+        # #     #out1 = layer(out1)
+        # #     #break
         out1_cat = self.bn_leakyrelu2(torch.cat([out1, out1_0, inp2], dim=1))
 
         # # stage 3
@@ -294,14 +306,26 @@ class CGNet(nn.Module):
         out2 = self.stage3_13(out2)
         out2 = self.stage3_14(out2)
         out2 = self.stage3_15(out2)
-        # # for layer in self.stage3:
-        # #   out2 = layer(out2)
-        out2_cat = self.bn_leakyrelu3(torch.cat([out2_0, out2], dim=1))
+        # # # for layer in self.stage3:
+        # # #   out2 = layer(out2)
+        # out2_cat = self.bn_leakyrelu3(torch.cat([out2_0, out2], dim=1))
+        out2_cat = torch.cat([out2_0, out2], dim=1)
 
         out = self.head(out2_cat)
         
         #out = F.interpolate(out, size, mode='bilinear', align_corners=False)
         #out = torch.sigmoid(out)
         #print(out)
+
+        return out
+
+class CGNetEnd(nn.Module):
+    def __init__(self):
+        super(CGNetEnd, self).__init__()
+        self.size = torch.Size([1088, 1456])
+        
+    def forward(self, x):
+        out = F.interpolate(x, self.size, mode='bilinear', align_corners=True)
+        out = torch.sigmoid(out)
 
         return out

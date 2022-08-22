@@ -1,6 +1,6 @@
 {
     "lib": "libvart-dpu-runner.so",
-    "filename": "CGNet_conv_4.xmodel",
+    "filename": "CGNet_conv_2.xmodel",
     "kernel": [
         "subgraph_CGNet__CGNet_ContextGuidedBlock_stage2_0__Conv2d_reduce__input_23"
     ],

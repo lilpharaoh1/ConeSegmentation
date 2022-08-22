@@ -204,8 +204,8 @@ class CGNet(nn.Module):
         self.stage0_0 = nn.AvgPool2d(kernel_size=(2,2), stride=2, padding=0)
         self.stage0_1 = nn.MaxPool2d(kernel_size=(2,2), stride=2, padding=0)
 
-        self.stage_0_conv_0 = nn.Conv2d(3, 3, kernel_size=(4, 1), stride=(4, 1), padding=0)
-        self.stage_0_conv_1 = nn.Conv2d(3, 3, kernel_size=(1, 4), stride=(1, 4), padding=0)
+        self.stage_0_conv_0 = nn.Conv2d(3, 3, kernel_size=(2, 1), stride=(2, 1), padding=0)
+        self.stage_0_conv_1 = nn.Conv2d(3, 3, kernel_size=(1, 2), stride=(1, 2), padding=0)
 
         # stage 1
         self.stage1_0 = _ConvBNLeakyReLU(3, 32, 3, 2, 1, **kwargs)

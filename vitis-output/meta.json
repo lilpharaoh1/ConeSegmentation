@@ -1,8 +1,8 @@
 {
     "lib": "libvart-dpu-runner.so",
-    "filename": "CGNet_conv_2.xmodel",
+    "filename": "CGNet_avmax.xmodel",
     "kernel": [
-        "subgraph_CGNet__CGNet_ContextGuidedBlock_stage2_0__Conv2d_reduce__input_23"
+        "subgraph_CGNet__CGNet_AvgPool2d_stage0_0__526"
     ],
     "target": "DPUCZDX8G_ISA0_B4096_MAX_BG2"
 }

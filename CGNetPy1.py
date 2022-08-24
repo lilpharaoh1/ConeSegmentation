@@ -262,10 +262,10 @@ class CGNet(nn.Module):
         # stage0
         size = x.size()[2:]
         #print(x.shape)
-        x = self.stage0_0(x)
-        x = self.stage0_1(x)
-        # x = self.stage_0_conv_0(x)
-        # x = self.stage_0_conv_1(x)
+        # x = self.stage0_0(x)
+        # x = self.stage0_1(x)
+        x = self.stage_0_conv_0(x)
+        x = self.stage_0_conv_1(x)
         #print(x.shape)        
         # stage1
         out0 = self.stage1_0(x)

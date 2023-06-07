@@ -1,0 +1,3035 @@
+digraph G0 {
+node [
+shape=box, style=rounded];
+subgraph clustersubgraph0 {
+graph [
+label=subgraph_CGNet__CGNet_ContextGuidedBlock_stage2_0__Conv2d_reduce__input_23];
+node [
+color=blue, shape=box, style=rounded, width=x];
+subgraph clustersubgraph1 {
+graph [
+label=subgraph_CGNet__CGNet__BNLeakyReLU_bn_leakyrelu1__BatchNorm2d_bn__input_13_transfer_to_depthwise_conv2d];
+node [
+shape=box, style=rounded, width=x];
+3[label="Name: CGNet__bn_leakyrelu1_bn_weight
+Type: const-fix
+Tensor: CGNet__bn_leakyrelu1_bn_weight_fix
+Shape: {1, 1, 1, 35}"];
+14[label="Name: CGNet__bn_leakyrelu1_bn_bias
+Type: const-fix
+Tensor: CGNet__bn_leakyrelu1_bn_bias_fix
+Shape: {35}"];
+230[label="Name: CGNet__CGNet__BNLeakyReLU_bn_leakyrelu1__Batc
+hNorm2d_bn__input_13_transfer_to_depthwise_conv2d
+Type: depthwise-conv2d-fix
+Tensor: CGNet__CGNet__BNLeakyReLU_bn_leakyrelu1__R
+eLU_leakyrelu__input_14_fix
+Shape: {1, 136, 182, 35}"];
+3 -> 230;
+14 -> 230;
+}
+subgraph clustersubgraph2 {
+graph [
+label=subgraph_CGNet__CGNet__BNLeakyReLU_bn_leakyrelu2__BatchNorm2d_bn__input_64_transfer_to_depthwise_conv2d];
+node [
+shape=box, style=rounded, width=x];
+2[label="Name: CGNet__bn_leakyrelu2_bn_weight
+Type: const-fix
+Tensor: CGNet__bn_leakyrelu2_bn_weight_fix
+Shape: {1, 1, 1, 131}"];
+56[label="Name: CGNet__bn_leakyrelu2_bn_bias
+Type: const-fix
+Tensor: CGNet__bn_leakyrelu2_bn_bias_fix
+Shape: {131}"];
+262[label="Name: CGNet__CGNet__BNLeakyReLU_bn_leakyrelu2__Batc
+hNorm2d_bn__input_64_transfer_to_depthwise_conv2d
+Type: depthwise-conv2d-fix
+Tensor: CGNet__CGNet__BNLeakyReLU_bn_leakyrelu2__R
+eLU_leakyrelu__input_65_fix
+Shape: {1, 68, 91, 131}"];
+2 -> 262;
+56 -> 262;
+}
+subgraph clustersubgraph3 {
+graph [
+label=subgraph_CGNet__CGNet_ContextGuidedBlock_stage2_0__Conv2d_reduce__input_23];
+node [
+shape=box, style=rounded, width=x];
+1[label="Name: CGNet__CGNet_ContextGuidedBlock_stage2_0__Con
+v2d_reduce__input_23_fake_bias
+Type: const-fix
+Tensor: CGNet__CGNet_ContextGuidedBlock_stage2_0__
+Conv2d_reduce__input_23_fake_bias_fix
+Shape: {64}"];
+21[label="Name: CGNet__stage2_0_reduce_weight
+Type: const-fix
+Tensor: CGNet__stage2_0_reduce_weight_fix
+Shape: {64, 1, 1, 128}"];
+235[label="Name: CGNet__CGNet_ContextGuidedBlock_stage2_0__Con
+v2d_reduce__input_23
+Type: conv2d-fix
+Tensor: CGNet__CGNet_ContextGuidedBlock_stage2_0__
+Conv2d_reduce__input_23_fix
+Shape: {1, 68, 91, 64}"];
+1 -> 235;
+21 -> 235;
+}
+subgraph clustersubgraph4 {
+graph [
+label=subgraph_CGNet__CGNet_ContextGuidedBlock_stage3_0__Conv2d_reduce__input_74];
+node [
+shape=box, style=rounded, width=x];
+0[label="Name: CGNet__CGNet_ContextGuidedBlock_stage3_0__Con
+v2d_reduce__input_74_fake_bias
+Type: const-fix
+Tensor: CGNet__CGNet_ContextGuidedBlock_stage3_0__
+Conv2d_reduce__input_74_fake_bias_fix
+Shape: {128}"];
+63[label="Name: CGNet__stage3_0_reduce_weight
+Type: const-fix
+Tensor: CGNet__stage3_0_reduce_weight_fix
+Shape: {128, 1, 1, 256}"];
+267[label="Name: CGNet__CGNet_ContextGuidedBlock_stage3_0__Con
+v2d_reduce__input_74
+Type: conv2d-fix
+Tensor: CGNet__CGNet_ContextGuidedBlock_stage3_0__
+Conv2d_reduce__input_74_fix
+Shape: {1, 34, 46, 128}"];
+0 -> 267;
+63 -> 267;
+}
+subgraph clustersubgraph5 {
+graph [
+label=subgraph_CGNet__CGNet_ContextGuidedBlock_stage2_3___ChannelWiseConv_f_loc__Conv2d_conv__input_55];
+node [
+shape=box, style=rounded, width=x];
+46[label="Name: CGNet__stage2_3_conv_conv_weight
+Type: const-fix
+Tensor: CGNet__stage2_3_conv_conv_weight_fix
+Shape: {32, 1, 1, 64}"];
+47[label="Name: CGNet__stage2_3_conv_conv_weight_bias
+Type: const-fix
+Tensor: CGNet__stage2_3_conv_conv_weight_bias_fix
+Shape: {32}"];
+48[label="Name: CGNet__stage2_3_f_loc_conv_weight
+Type: const-fix
+Tensor: CGNet__stage2_3_f_loc_conv_weight_fix
+Shape: {1, 3, 3, 32}"];
+49[label="Name: CGNet__stage2_3_f_loc_conv_weight_bias
+Type: const-fix
+Tensor: CGNet__stage2_3_f_loc_conv_weight_bias_fix
+Shape: {32}"];
+252[label="Name: CGNet__CGNet_ContextGuidedBlock_stage2_3___Co
+nvBNLeakyReLU_conv__Conv2d_conv__input_52
+Type: conv2d-fix
+Tensor: CGNet__CGNet_ContextGuidedBlock_stage2_3__
+_ConvBNLeakyReLU_conv__LeakyReLU_leakyrelu__input_
+54_fix
+Shape: {1, 68, 91, 32}"];
+253[label="Name: CGNet__CGNet_ContextGuidedBlock_stage2_3___Ch
+annelWiseConv_f_loc__Conv2d_conv__input_55
+Type: depthwise-conv2d-fix
+Tensor: CGNet__CGNet_ContextGuidedBlock_stage2_3__
+_BNLeakyReLU_reduction_bnlr__ReLU_leakyrelu__921_i
+nserted_fix_8
+Shape: {1, 68, 91, 32}"];
+46 -> 252;
+47 -> 252;
+48 -> 253;
+49 -> 253;
+252 -> 253;
+}
+subgraph clustersubgraph6 {
+graph [
+label=subgraph_CGNet__CGNet_ContextGuidedBlock_stage2_1___FGlo1_f_glo1__Conv2d_fc1__input_36];
+node [
+shape=box, style=rounded, width=x];
+32[label="Name: CGNet__stage2_1_f_glo1_fc1_weight
+Type: const-fix
+Tensor: CGNet__stage2_1_f_glo1_fc1_weight_fix
+Shape: {8, 1, 1, 64}"];
+33[label="Name: CGNet__stage2_1_f_glo1_fc1_bias
+Type: const-fix
+Tensor: CGNet__stage2_1_f_glo1_fc1_bias_fix
+Shape: {8}"];
+242[label="Name: CGNet__CGNet_ContextGuidedBlock_stage2_1___FG
+lo1_f_glo1__Conv2d_fc1__input_36
+Type: conv2d-fix
+Tensor: CGNet__CGNet_ContextGuidedBlock_stage2_1__
+_FGlo1_f_glo1__ReLU_relu__input_37_fix
+Shape: {1, 68, 91, 8}"];
+32 -> 242;
+33 -> 242;
+}
+subgraph clustersubgraph7 {
+graph [
+label=subgraph_CGNet__CGNet_ContextGuidedBlock_stage2_2___FGlo1_f_glo1__Conv2d_fc2__input_50];
+node [
+shape=box, style=rounded, width=x];
+44[label="Name: CGNet__stage2_2_f_glo1_fc2_weight
+Type: const-fix
+Tensor: CGNet__stage2_2_f_glo1_fc2_weight_fix
+Shape: {64, 1, 1, 8}"];
+45[label="Name: CGNet__stage2_2_f_glo1_fc2_bias
+Type: const-fix
+Tensor: CGNet__stage2_2_f_glo1_fc2_bias_fix
+Shape: {64}"];
+248[label="Name: CGNet__CGNet_ContextGuidedBlock_stage2_2__inp
+ut_51
+Type: eltwise-fix
+Tensor: CGNet__CGNet_ContextGuidedBlock_stage2_2__
+input_51_fix
+Shape: {1, 68, 91, 64}"];
+250[label="Name: CGNet__CGNet_ContextGuidedBlock_stage2_2___FG
+lo1_f_glo1__Conv2d_fc2__input_50
+Type: conv2d-fix
+Tensor: CGNet__CGNet_ContextGuidedBlock_stage2_2__
+_FGlo1_f_glo1__Hardtanh_hardtanh__873_fix
+Shape: {1, 68, 91, 64}"];
+44 -> 250;
+45 -> 250;
+250 -> 248;
+}
+subgraph clustersubgraph8 {
+graph [
+label=subgraph_CGNet__CGNet_ContextGuidedBlock_stage2_1___ChannelWiseConv_f_sur__Conv2d_conv__input_33];
+node [
+shape=box, style=rounded, width=x];
+30[label="Name: CGNet__stage2_1_f_sur_conv_weight
+Type: const-fix
+Tensor: CGNet__stage2_1_f_sur_conv_weight_fix
+Shape: {1, 3, 3, 32}"];
+31[label="Name: CGNet__stage2_1_f_sur_conv_weight_bias
+Type: const-fix
+Tensor: CGNet__stage2_1_f_sur_conv_weight_bias_fix
+Shape: {32}"];
+240[label="Name: CGNet__CGNet_ContextGuidedBlock_stage2_1___Ch
+annelWiseConv_f_sur__Conv2d_conv__input_33
+Type: depthwise-conv2d-fix
+Tensor: CGNet__CGNet_ContextGuidedBlock_stage2_1__
+_BNLeakyReLU_reduction_bnlr__ReLU_leakyrelu__765_i
+nserted_fix_5
+Shape: {1, 68, 91, 32}"];
+30 -> 240;
+31 -> 240;
+}
+subgraph clustersubgraph9 {
+graph [
+label=subgraph_CGNet__CGNet_ContextGuidedBlock_stage2_2___FGlo1_f_glo1__Conv2d_fc1__input_48];
+node [
+shape=box, style=rounded, width=x];
+42[label="Name: CGNet__stage2_2_f_glo1_fc1_weight
+Type: const-fix
+Tensor: CGNet__stage2_2_f_glo1_fc1_weight_fix
+Shape: {8, 1, 1, 64}"];
+43[label="Name: CGNet__stage2_2_f_glo1_fc1_bias
+Type: const-fix
+Tensor: CGNet__stage2_2_f_glo1_fc1_bias_fix
+Shape: {8}"];
+249[label="Name: CGNet__CGNet_ContextGuidedBlock_stage2_2___FG
+lo1_f_glo1__Conv2d_fc1__input_48
+Type: conv2d-fix
+Tensor: CGNet__CGNet_ContextGuidedBlock_stage2_2__
+_FGlo1_f_glo1__ReLU_relu__input_49_fix
+Shape: {1, 68, 91, 8}"];
+42 -> 249;
+43 -> 249;
+}
+subgraph clustersubgraph10 {
+graph [
+label=subgraph_CGNet__CGNet_ContextGuidedBlock_stage2_1___ChannelWiseConv_f_loc__Conv2d_conv__input_31];
+node [
+shape=box, style=rounded, width=x];
+26[label="Name: CGNet__stage2_1_conv_conv_weight
+Type: const-fix
+Tensor: CGNet__stage2_1_conv_conv_weight_fix
+Shape: {32, 1, 1, 64}"];
+27[label="Name: CGNet__stage2_1_conv_conv_weight_bias
+Type: const-fix
+Tensor: CGNet__stage2_1_conv_conv_weight_bias_fix
+Shape: {32}"];
+28[label="Name: CGNet__stage2_1_f_loc_conv_weight
+Type: const-fix
+Tensor: CGNet__stage2_1_f_loc_conv_weight_fix
+Shape: {1, 3, 3, 32}"];
+29[label="Name: CGNet__stage2_1_f_loc_conv_weight_bias
+Type: const-fix
+Tensor: CGNet__stage2_1_f_loc_conv_weight_bias_fix
+Shape: {32}"];
+238[label="Name: CGNet__CGNet_ContextGuidedBlock_stage2_1___Co
+nvBNLeakyReLU_conv__Conv2d_conv__input_28
+Type: conv2d-fix
+Tensor: CGNet__CGNet_ContextGuidedBlock_stage2_1__
+_ConvBNLeakyReLU_conv__LeakyReLU_leakyrelu__input_
+30_fix
+Shape: {1, 68, 91, 32}"];
+239[label="Name: CGNet__CGNet_ContextGuidedBlock_stage2_1___Ch
+annelWiseConv_f_loc__Conv2d_conv__input_31
+Type: depthwise-conv2d-fix
+Tensor: CGNet__CGNet_ContextGuidedBlock_stage2_1__
+_BNLeakyReLU_reduction_bnlr__ReLU_leakyrelu__759_i
+nserted_fix_4
+Shape: {1, 68, 91, 32}"];
+26 -> 238;
+27 -> 238;
+28 -> 239;
+29 -> 239;
+238 -> 239;
+}
+subgraph clustersubgraph11 {
+graph [
+label=subgraph_CGNet__CGNet_ContextGuidedBlock_stage2_2___ChannelWiseConv_f_sur__Conv2d_conv__input_45];
+node [
+shape=box, style=rounded, width=x];
+40[label="Name: CGNet__stage2_2_f_sur_conv_weight
+Type: const-fix
+Tensor: CGNet__stage2_2_f_sur_conv_weight_fix
+Shape: {1, 3, 3, 32}"];
+41[label="Name: CGNet__stage2_2_f_sur_conv_weight_bias
+Type: const-fix
+Tensor: CGNet__stage2_2_f_sur_conv_weight_bias_fix
+Shape: {32}"];
+247[label="Name: CGNet__CGNet_ContextGuidedBlock_stage2_2___Ch
+annelWiseConv_f_sur__Conv2d_conv__input_45
+Type: depthwise-conv2d-fix
+Tensor: CGNet__CGNet_ContextGuidedBlock_stage2_2__
+_BNLeakyReLU_reduction_bnlr__ReLU_leakyrelu__846_i
+nserted_fix_7
+Shape: {1, 68, 91, 32}"];
+40 -> 247;
+41 -> 247;
+}
+subgraph clustersubgraph12 {
+graph [
+label=subgraph_CGNet__CGNet_ContextGuidedBlock_stage2_2___ChannelWiseConv_f_loc__Conv2d_conv__input_43];
+node [
+shape=box, style=rounded, width=x];
+36[label="Name: CGNet__stage2_2_conv_conv_weight
+Type: const-fix
+Tensor: CGNet__stage2_2_conv_conv_weight_fix
+Shape: {32, 1, 1, 64}"];
+37[label="Name: CGNet__stage2_2_conv_conv_weight_bias
+Type: const-fix
+Tensor: CGNet__stage2_2_conv_conv_weight_bias_fix
+Shape: {32}"];
+38[label="Name: CGNet__stage2_2_f_loc_conv_weight
+Type: const-fix
+Tensor: CGNet__stage2_2_f_loc_conv_weight_fix
+Shape: {1, 3, 3, 32}"];
+39[label="Name: CGNet__stage2_2_f_loc_conv_weight_bias
+Type: const-fix
+Tensor: CGNet__stage2_2_f_loc_conv_weight_bias_fix
+Shape: {32}"];
+245[label="Name: CGNet__CGNet_ContextGuidedBlock_stage2_2___Co
+nvBNLeakyReLU_conv__Conv2d_conv__input_40
+Type: conv2d-fix
+Tensor: CGNet__CGNet_ContextGuidedBlock_stage2_2__
+_ConvBNLeakyReLU_conv__LeakyReLU_leakyrelu__input_
+42_fix
+Shape: {1, 68, 91, 32}"];
+246[label="Name: CGNet__CGNet_ContextGuidedBlock_stage2_2___Ch
+annelWiseConv_f_loc__Conv2d_conv__input_43
+Type: depthwise-conv2d-fix
+Tensor: CGNet__CGNet_ContextGuidedBlock_stage2_2__
+_BNLeakyReLU_reduction_bnlr__ReLU_leakyrelu__840_i
+nserted_fix_6
+Shape: {1, 68, 91, 32}"];
+36 -> 245;
+37 -> 245;
+38 -> 246;
+39 -> 246;
+245 -> 246;
+}
+subgraph clustersubgraph13 {
+graph [
+label=subgraph_CGNet__CGNet_ContextGuidedBlock_stage2_1___FGlo1_f_glo1__Conv2d_fc2__input_38];
+node [
+shape=box, style=rounded, width=x];
+34[label="Name: CGNet__stage2_1_f_glo1_fc2_weight
+Type: const-fix
+Tensor: CGNet__stage2_1_f_glo1_fc2_weight_fix
+Shape: {64, 1, 1, 8}"];
+35[label="Name: CGNet__stage2_1_f_glo1_fc2_bias
+Type: const-fix
+Tensor: CGNet__stage2_1_f_glo1_fc2_bias_fix
+Shape: {64}"];
+241[label="Name: CGNet__CGNet_ContextGuidedBlock_stage2_1__inp
+ut_39
+Type: eltwise-fix
+Tensor: CGNet__CGNet_ContextGuidedBlock_stage2_1__
+input_39_fix
+Shape: {1, 68, 91, 64}"];
+243[label="Name: CGNet__CGNet_ContextGuidedBlock_stage2_1___FG
+lo1_f_glo1__Conv2d_fc2__input_38
+Type: conv2d-fix
+Tensor: CGNet__CGNet_ContextGuidedBlock_stage2_1__
+_FGlo1_f_glo1__Hardtanh_hardtanh__792_fix
+Shape: {1, 68, 91, 64}"];
+34 -> 243;
+35 -> 243;
+243 -> 241;
+}
+subgraph clustersubgraph14 {
+graph [
+label=subgraph_CGNet__CGNet__ConvBNLeakyReLU_stage1_1__Conv2d_conv__input_7];
+node [
+shape=box, style=rounded, width=x];
+10[label="Name: CGNet__stage1_1_conv_weight
+Type: const-fix
+Tensor: CGNet__stage1_1_conv_weight_fix
+Shape: {32, 3, 3, 32}"];
+11[label="Name: CGNet__stage1_1_conv_weight_bias
+Type: const-fix
+Tensor: CGNet__stage1_1_conv_weight_bias_fix
+Shape: {32}"];
+226[label="Name: CGNet__CGNet__ConvBNLeakyReLU_stage1_1__Conv2
+d_conv__input_7
+Type: conv2d-fix
+Tensor: CGNet__CGNet__ConvBNLeakyReLU_stage1_1__Le
+akyReLU_leakyrelu__input_9_fix
+Shape: {1, 136, 182, 32}"];
+10 -> 226;
+11 -> 226;
+}
+subgraph clustersubgraph15 {
+graph [
+label=subgraph_CGNet__CGNet__ConvBNLeakyReLU_stage1_2__Conv2d_conv__input_10];
+node [
+shape=box, style=rounded, width=x];
+12[label="Name: CGNet__stage1_2_conv_weight
+Type: const-fix
+Tensor: CGNet__stage1_2_conv_weight_fix
+Shape: {32, 3, 3, 32}"];
+13[label="Name: CGNet__stage1_2_conv_weight_bias
+Type: const-fix
+Tensor: CGNet__stage1_2_conv_weight_bias_fix
+Shape: {32}"];
+227[label="Name: CGNet__CGNet__ConvBNLeakyReLU_stage1_2__Conv2
+d_conv__input_10
+Type: conv2d-fix
+Tensor: CGNet__CGNet__ConvBNLeakyReLU_stage1_2__Le
+akyReLU_leakyrelu__593_inserted_fix_0
+Shape: {1, 136, 182, 32}"];
+12 -> 227;
+13 -> 227;
+}
+subgraph clustersubgraph16 {
+graph [
+label=subgraph_CGNet__CGNet_ContextGuidedBlock_stage2_0___ChannelWiseConv_f_loc__Conv2d_conv__input_18];
+node [
+shape=box, style=rounded, width=x];
+15[label="Name: CGNet__stage2_0_conv_conv_weight
+Type: const-fix
+Tensor: CGNet__stage2_0_conv_conv_weight_fix
+Shape: {64, 3, 3, 35}"];
+16[label="Name: CGNet__stage2_0_conv_conv_weight_bias
+Type: const-fix
+Tensor: CGNet__stage2_0_conv_conv_weight_bias_fix
+Shape: {64}"];
+17[label="Name: CGNet__stage2_0_f_loc_conv_weight
+Type: const-fix
+Tensor: CGNet__stage2_0_f_loc_conv_weight_fix
+Shape: {1, 3, 3, 64}"];
+18[label="Name: CGNet__stage2_0_f_loc_conv_weight_bias
+Type: const-fix
+Tensor: CGNet__stage2_0_f_loc_conv_weight_bias_fix
+Shape: {64}"];
+231[label="Name: CGNet__CGNet_ContextGuidedBlock_stage2_0___Co
+nvBNLeakyReLU_conv__Conv2d_conv__input_15
+Type: conv2d-fix
+Tensor: CGNet__CGNet_ContextGuidedBlock_stage2_0__
+_ConvBNLeakyReLU_conv__LeakyReLU_leakyrelu__input_
+17_fix
+Shape: {1, 68, 91, 64}"];
+232[label="Name: CGNet__CGNet_ContextGuidedBlock_stage2_0___Ch
+annelWiseConv_f_loc__Conv2d_conv__input_18
+Type: depthwise-conv2d-fix
+Tensor: CGNet__CGNet_ContextGuidedBlock_stage2_0__
+_BNLeakyReLU_reduction_bnlr__ReLU_leakyrelu__669_i
+nserted_fix_2
+Shape: {1, 68, 91, 64}"];
+15 -> 231;
+16 -> 231;
+17 -> 232;
+18 -> 232;
+231 -> 232;
+}
+subgraph clustersubgraph17 {
+graph [
+label=subgraph_CGNet__CGNet_ContextGuidedBlock_stage2_0___ChannelWiseConv_f_sur__Conv2d_conv__input_20];
+node [
+shape=box, style=rounded, width=x];
+19[label="Name: CGNet__stage2_0_f_sur_conv_weight
+Type: const-fix
+Tensor: CGNet__stage2_0_f_sur_conv_weight_fix
+Shape: {1, 3, 3, 64}"];
+20[label="Name: CGNet__stage2_0_f_sur_conv_weight_bias
+Type: const-fix
+Tensor: CGNet__stage2_0_f_sur_conv_weight_bias_fix
+Shape: {64}"];
+233[label="Name: CGNet__CGNet_ContextGuidedBlock_stage2_0___Ch
+annelWiseConv_f_sur__Conv2d_conv__input_20
+Type: depthwise-conv2d-fix
+Tensor: CGNet__CGNet_ContextGuidedBlock_stage2_0__
+_BNLeakyReLU_reduction_bnlr__ReLU_leakyrelu__675_i
+nserted_fix_3
+Shape: {1, 68, 91, 64}"];
+19 -> 233;
+20 -> 233;
+}
+subgraph clustersubgraph18 {
+graph [
+label=subgraph_CGNet__CGNet_ContextGuidedBlock_stage2_0___FGlo1_f_glo1__Conv2d_fc1__input_24];
+node [
+shape=box, style=rounded, width=x];
+22[label="Name: CGNet__stage2_0_f_glo1_fc1_weight
+Type: const-fix
+Tensor: CGNet__stage2_0_f_glo1_fc1_weight_fix
+Shape: {8, 1, 1, 64}"];
+23[label="Name: CGNet__stage2_0_f_glo1_fc1_bias
+Type: const-fix
+Tensor: CGNet__stage2_0_f_glo1_fc1_bias_fix
+Shape: {8}"];
+236[label="Name: CGNet__CGNet_ContextGuidedBlock_stage2_0___FG
+lo1_f_glo1__Conv2d_fc1__input_24
+Type: conv2d-fix
+Tensor: CGNet__CGNet_ContextGuidedBlock_stage2_0__
+_FGlo1_f_glo1__ReLU_relu__input_25_fix
+Shape: {1, 68, 91, 8}"];
+22 -> 236;
+23 -> 236;
+}
+subgraph clustersubgraph19 {
+graph [
+label=subgraph_CGNet__CGNet_ContextGuidedBlock_stage2_0___FGlo1_f_glo1__Conv2d_fc2__input_26];
+node [
+shape=box, style=rounded, width=x];
+24[label="Name: CGNet__stage2_0_f_glo1_fc2_weight
+Type: const-fix
+Tensor: CGNet__stage2_0_f_glo1_fc2_weight_fix
+Shape: {64, 1, 1, 8}"];
+25[label="Name: CGNet__stage2_0_f_glo1_fc2_bias
+Type: const-fix
+Tensor: CGNet__stage2_0_f_glo1_fc2_bias_fix
+Shape: {64}"];
+237[label="Name: CGNet__CGNet_ContextGuidedBlock_stage2_0___FG
+lo1_f_glo1__Conv2d_fc2__input_26
+Type: conv2d-fix
+Tensor: CGNet__CGNet_ContextGuidedBlock_stage2_0__
+_FGlo1_f_glo1__Hardtanh_hardtanh__input_27_fix
+Shape: {1, 68, 91, 64}"];
+24 -> 237;
+25 -> 237;
+}
+subgraph clustersubgraph20 {
+graph [
+label=subgraph_CGNet__CGNet_ContextGuidedBlock_stage2_3__input_59];
+node [
+shape=box, style=rounded, width=x];
+251[label="Name: CGNet__CGNet_ContextGuidedBlock_stage2_3__inp
+ut_59
+Type: concat-fix
+Tensor: CGNet__CGNet_ContextGuidedBlock_stage2_3__
+input_59_fix
+Shape: {1, 68, 91, 64}"];
+}
+subgraph clustersubgraph21 {
+graph [
+label=subgraph_CGNet__CGNet_ContextGuidedBlock_stage2_3___ChannelWiseConv_f_sur__Conv2d_conv__input_57];
+node [
+shape=box, style=rounded, width=x];
+50[label="Name: CGNet__stage2_3_f_sur_conv_weight
+Type: const-fix
+Tensor: CGNet__stage2_3_f_sur_conv_weight_fix
+Shape: {1, 3, 3, 32}"];
+51[label="Name: CGNet__stage2_3_f_sur_conv_weight_bias
+Type: const-fix
+Tensor: CGNet__stage2_3_f_sur_conv_weight_bias_fix
+Shape: {32}"];
+254[label="Name: CGNet__CGNet_ContextGuidedBlock_stage2_3___Ch
+annelWiseConv_f_sur__Conv2d_conv__input_57
+Type: depthwise-conv2d-fix
+Tensor: CGNet__CGNet_ContextGuidedBlock_stage2_3__
+_BNLeakyReLU_reduction_bnlr__ReLU_leakyrelu__927_i
+nserted_fix_9
+Shape: {1, 68, 91, 32}"];
+50 -> 254;
+51 -> 254;
+}
+subgraph clustersubgraph22 {
+graph [
+label=subgraph_CGNet__CGNet_ContextGuidedBlock_stage2_3__956];
+node [
+shape=box, style=rounded, width=x];
+54[label="Name: CGNet__stage2_3_f_glo1_fc2_weight
+Type: const-fix
+Tensor: CGNet__stage2_3_f_glo1_fc2_weight_fix
+Shape: {64, 1, 1, 8}"];
+55[label="Name: CGNet__stage2_3_f_glo1_fc2_bias
+Type: const-fix
+Tensor: CGNet__stage2_3_f_glo1_fc2_bias_fix
+Shape: {64}"];
+255[label="Name: CGNet__CGNet_ContextGuidedBlock_stage2_3__956
+Type: eltwise-fix
+Tensor: CGNet__CGNet_ContextGuidedBlock_stage2_3__
+956_inserted_fix_10
+Shape: {1, 68, 91, 64}"];
+257[label="Name: CGNet__CGNet_ContextGuidedBlock_stage2_3___FG
+lo1_f_glo1__Conv2d_fc2__input_62
+Type: conv2d-fix
+Tensor: CGNet__CGNet_ContextGuidedBlock_stage2_3__
+_FGlo1_f_glo1__Hardtanh_hardtanh__954_fix
+Shape: {1, 68, 91, 64}"];
+54 -> 257;
+55 -> 257;
+257 -> 255;
+}
+subgraph clustersubgraph23 {
+graph [
+label=subgraph_CGNet__CGNet_ContextGuidedBlock_stage2_3___FGlo1_f_glo1__Conv2d_fc1__input_60];
+node [
+shape=box, style=rounded, width=x];
+52[label="Name: CGNet__stage2_3_f_glo1_fc1_weight
+Type: const-fix
+Tensor: CGNet__stage2_3_f_glo1_fc1_weight_fix
+Shape: {8, 1, 1, 64}"];
+53[label="Name: CGNet__stage2_3_f_glo1_fc1_bias
+Type: const-fix
+Tensor: CGNet__stage2_3_f_glo1_fc1_bias_fix
+Shape: {8}"];
+256[label="Name: CGNet__CGNet_ContextGuidedBlock_stage2_3___FG
+lo1_f_glo1__Conv2d_fc1__input_60
+Type: conv2d-fix
+Tensor: CGNet__CGNet_ContextGuidedBlock_stage2_3__
+_FGlo1_f_glo1__ReLU_relu__input_61_fix
+Shape: {1, 68, 91, 8}"];
+52 -> 256;
+53 -> 256;
+}
+subgraph clustersubgraph24 {
+graph [
+label=subgraph_CGNet__CGNet__InputInjection_sample2__AvgPool2d_pool__ModuleList_1__614_i0];
+node [
+shape=box, style=rounded, width=x];
+259[label="Name: CGNet__CGNet__InputInjection_sample2__AvgPool
+2d_pool__ModuleList_1__614_i0
+Type: pool-fix
+Tensor: CGNet__CGNet__InputInjection_sample2__AvgP
+ool2d_pool__ModuleList_1__614_inserted_fix_11
+Shape: {1, 68, 91, 3}"];
+}
+subgraph clustersubgraph25 {
+graph [
+label=subgraph_CGNet__CGNet_input_63];
+node [
+shape=box, style=rounded, width=x];
+260[label="Name: CGNet__CGNet_input_63
+Type: concat-fix
+Tensor: CGNet__CGNet_input_63_fix_reshaped_inserte
+d_fix_47
+Shape: {1, 68, 91, 131}"];
+}
+subgraph clustersubgraph26 {
+graph [
+label=subgraph_CGNet__CGNet_ContextGuidedBlock_stage3_0__input_73];
+node [
+shape=box, style=rounded, width=x];
+261[label="Name: CGNet__CGNet_ContextGuidedBlock_stage3_0__inp
+ut_73
+Type: concat-fix
+Tensor: CGNet__CGNet_ContextGuidedBlock_stage3_0__
+input_73_fix
+Shape: {1, 34, 46, 256}"];
+}
+subgraph clustersubgraph27 {
+graph [
+label=subgraph_CGNet__CGNet_ContextGuidedBlock_stage3_0___ChannelWiseConv_f_loc__Conv2d_conv__input_69];
+node [
+shape=box, style=rounded, width=x];
+57[label="Name: CGNet__stage3_0_conv_conv_weight
+Type: const-fix
+Tensor: CGNet__stage3_0_conv_conv_weight_fix
+Shape: {128, 3, 3, 131}"];
+58[label="Name: CGNet__stage3_0_conv_conv_weight_bias
+Type: const-fix
+Tensor: CGNet__stage3_0_conv_conv_weight_bias_fix
+Shape: {128}"];
+59[label="Name: CGNet__stage3_0_f_loc_conv_weight
+Type: const-fix
+Tensor: CGNet__stage3_0_f_loc_conv_weight_fix
+Shape: {1, 3, 3, 128}"];
+60[label="Name: CGNet__stage3_0_f_loc_conv_weight_bias
+Type: const-fix
+Tensor: CGNet__stage3_0_f_loc_conv_weight_bias_fix
+Shape: {128}"];
+263[label="Name: CGNet__CGNet_ContextGuidedBlock_stage3_0___Co
+nvBNLeakyReLU_conv__Conv2d_conv__input_66
+Type: conv2d-fix
+Tensor: CGNet__CGNet_ContextGuidedBlock_stage3_0__
+_ConvBNLeakyReLU_conv__LeakyReLU_leakyrelu__input_
+68_fix
+Shape: {1, 34, 46, 128}"];
+264[label="Name: CGNet__CGNet_ContextGuidedBlock_stage3_0___Ch
+annelWiseConv_f_loc__Conv2d_conv__input_69
+Type: depthwise-conv2d-fix
+Tensor: CGNet__CGNet_ContextGuidedBlock_stage3_0__
+_BNLeakyReLU_reduction_bnlr__ReLU_leakyrelu__1011_
+inserted_fix_12
+Shape: {1, 34, 46, 128}"];
+57 -> 263;
+58 -> 263;
+59 -> 264;
+60 -> 264;
+263 -> 264;
+}
+subgraph clustersubgraph28 {
+graph [
+label=subgraph_CGNet__CGNet_ContextGuidedBlock_stage3_0___ChannelWiseConv_f_sur__Conv2d_conv__input_71];
+node [
+shape=box, style=rounded, width=x];
+61[label="Name: CGNet__stage3_0_f_sur_conv_weight
+Type: const-fix
+Tensor: CGNet__stage3_0_f_sur_conv_weight_fix
+Shape: {1, 3, 3, 128}"];
+62[label="Name: CGNet__stage3_0_f_sur_conv_weight_bias
+Type: const-fix
+Tensor: CGNet__stage3_0_f_sur_conv_weight_bias_fix
+Shape: {128}"];
+265[label="Name: CGNet__CGNet_ContextGuidedBlock_stage3_0___Ch
+annelWiseConv_f_sur__Conv2d_conv__input_71
+Type: depthwise-conv2d-fix
+Tensor: CGNet__CGNet_ContextGuidedBlock_stage3_0__
+_BNLeakyReLU_reduction_bnlr__ReLU_leakyrelu__1017_
+inserted_fix_13
+Shape: {1, 34, 46, 128}"];
+61 -> 265;
+62 -> 265;
+}
+subgraph clustersubgraph29 {
+graph [
+label=subgraph_CGNet__CGNet_ContextGuidedBlock_stage3_1__input_86];
+node [
+shape=box, style=rounded, width=x];
+266[label="Name: CGNet__CGNet_ContextGuidedBlock_stage3_1__inp
+ut_86
+Type: concat-fix
+Tensor: CGNet__CGNet_ContextGuidedBlock_stage3_1__
+input_86_fix
+Shape: {1, 34, 46, 128}"];
+}
+subgraph clustersubgraph30 {
+graph [
+label=subgraph_CGNet__CGNet_ContextGuidedBlock_stage3_0___FGlo1_f_glo1__Conv2d_fc1__input_75];
+node [
+shape=box, style=rounded, width=x];
+64[label="Name: CGNet__stage3_0_f_glo1_fc1_weight
+Type: const-fix
+Tensor: CGNet__stage3_0_f_glo1_fc1_weight_fix
+Shape: {8, 1, 1, 128}"];
+65[label="Name: CGNet__stage3_0_f_glo1_fc1_bias
+Type: const-fix
+Tensor: CGNet__stage3_0_f_glo1_fc1_bias_fix
+Shape: {8}"];
+268[label="Name: CGNet__CGNet_ContextGuidedBlock_stage3_0___FG
+lo1_f_glo1__Conv2d_fc1__input_75
+Type: conv2d-fix
+Tensor: CGNet__CGNet_ContextGuidedBlock_stage3_0__
+_FGlo1_f_glo1__ReLU_relu__input_76_fix
+Shape: {1, 34, 46, 8}"];
+64 -> 268;
+65 -> 268;
+}
+subgraph clustersubgraph31 {
+graph [
+label=subgraph_CGNet__CGNet_ContextGuidedBlock_stage3_0___FGlo1_f_glo1__Conv2d_fc2__input_77];
+node [
+shape=box, style=rounded, width=x];
+66[label="Name: CGNet__stage3_0_f_glo1_fc2_weight
+Type: const-fix
+Tensor: CGNet__stage3_0_f_glo1_fc2_weight_fix
+Shape: {128, 1, 1, 8}"];
+67[label="Name: CGNet__stage3_0_f_glo1_fc2_bias
+Type: const-fix
+Tensor: CGNet__stage3_0_f_glo1_fc2_bias_fix
+Shape: {128}"];
+269[label="Name: CGNet__CGNet_ContextGuidedBlock_stage3_0___FG
+lo1_f_glo1__Conv2d_fc2__input_77
+Type: conv2d-fix
+Tensor: CGNet__CGNet_ContextGuidedBlock_stage3_0__
+_FGlo1_f_glo1__Hardtanh_hardtanh__input_78_fix
+Shape: {1, 34, 46, 128}"];
+66 -> 269;
+67 -> 269;
+}
+subgraph clustersubgraph32 {
+graph [
+label=subgraph_CGNet__CGNet_ContextGuidedBlock_stage3_1___ChannelWiseConv_f_loc__Conv2d_conv__input_82];
+node [
+shape=box, style=rounded, width=x];
+68[label="Name: CGNet__stage3_1_conv_conv_weight
+Type: const-fix
+Tensor: CGNet__stage3_1_conv_conv_weight_fix
+Shape: {64, 1, 1, 128}"];
+69[label="Name: CGNet__stage3_1_conv_conv_weight_bias
+Type: const-fix
+Tensor: CGNet__stage3_1_conv_conv_weight_bias_fix
+Shape: {64}"];
+70[label="Name: CGNet__stage3_1_f_loc_conv_weight
+Type: const-fix
+Tensor: CGNet__stage3_1_f_loc_conv_weight_fix
+Shape: {1, 3, 3, 64}"];
+71[label="Name: CGNet__stage3_1_f_loc_conv_weight_bias
+Type: const-fix
+Tensor: CGNet__stage3_1_f_loc_conv_weight_bias_fix
+Shape: {64}"];
+270[label="Name: CGNet__CGNet_ContextGuidedBlock_stage3_1___Co
+nvBNLeakyReLU_conv__Conv2d_conv__input_79
+Type: conv2d-fix
+Tensor: CGNet__CGNet_ContextGuidedBlock_stage3_1__
+_ConvBNLeakyReLU_conv__LeakyReLU_leakyrelu__input_
+81_fix
+Shape: {1, 34, 46, 64}"];
+271[label="Name: CGNet__CGNet_ContextGuidedBlock_stage3_1___Ch
+annelWiseConv_f_loc__Conv2d_conv__input_82
+Type: depthwise-conv2d-fix
+Tensor: CGNet__CGNet_ContextGuidedBlock_stage3_1__
+_BNLeakyReLU_reduction_bnlr__ReLU_leakyrelu__1101_
+inserted_fix_14
+Shape: {1, 34, 46, 64}"];
+68 -> 270;
+69 -> 270;
+70 -> 271;
+71 -> 271;
+270 -> 271;
+}
+subgraph clustersubgraph33 {
+graph [
+label=subgraph_CGNet__CGNet_ContextGuidedBlock_stage3_1___ChannelWiseConv_f_sur__Conv2d_conv__input_84];
+node [
+shape=box, style=rounded, width=x];
+72[label="Name: CGNet__stage3_1_f_sur_conv_weight
+Type: const-fix
+Tensor: CGNet__stage3_1_f_sur_conv_weight_fix
+Shape: {1, 3, 3, 64}"];
+73[label="Name: CGNet__stage3_1_f_sur_conv_weight_bias
+Type: const-fix
+Tensor: CGNet__stage3_1_f_sur_conv_weight_bias_fix
+Shape: {64}"];
+272[label="Name: CGNet__CGNet_ContextGuidedBlock_stage3_1___Ch
+annelWiseConv_f_sur__Conv2d_conv__input_84
+Type: depthwise-conv2d-fix
+Tensor: CGNet__CGNet_ContextGuidedBlock_stage3_1__
+_BNLeakyReLU_reduction_bnlr__ReLU_leakyrelu__1107_
+inserted_fix_15
+Shape: {1, 34, 46, 64}"];
+72 -> 272;
+73 -> 272;
+}
+subgraph clustersubgraph34 {
+graph [
+label=subgraph_CGNet__CGNet_ContextGuidedBlock_stage3_1___FGlo1_f_glo1__Conv2d_fc2__input_89];
+node [
+shape=box, style=rounded, width=x];
+76[label="Name: CGNet__stage3_1_f_glo1_fc2_weight
+Type: const-fix
+Tensor: CGNet__stage3_1_f_glo1_fc2_weight_fix
+Shape: {128, 1, 1, 8}"];
+77[label="Name: CGNet__stage3_1_f_glo1_fc2_bias
+Type: const-fix
+Tensor: CGNet__stage3_1_f_glo1_fc2_bias_fix
+Shape: {128}"];
+273[label="Name: CGNet__CGNet_ContextGuidedBlock_stage3_1__inp
+ut_90
+Type: eltwise-fix
+Tensor: CGNet__CGNet_ContextGuidedBlock_stage3_1__
+input_90_fix
+Shape: {1, 34, 46, 128}"];
+275[label="Name: CGNet__CGNet_ContextGuidedBlock_stage3_1___FG
+lo1_f_glo1__Conv2d_fc2__input_89
+Type: conv2d-fix
+Tensor: CGNet__CGNet_ContextGuidedBlock_stage3_1__
+_FGlo1_f_glo1__Hardtanh_hardtanh__1134_fix
+Shape: {1, 34, 46, 128}"];
+76 -> 275;
+77 -> 275;
+275 -> 273;
+}
+subgraph clustersubgraph35 {
+graph [
+label=subgraph_CGNet__CGNet_ContextGuidedBlock_stage3_1___FGlo1_f_glo1__Conv2d_fc1__input_87];
+node [
+shape=box, style=rounded, width=x];
+74[label="Name: CGNet__stage3_1_f_glo1_fc1_weight
+Type: const-fix
+Tensor: CGNet__stage3_1_f_glo1_fc1_weight_fix
+Shape: {8, 1, 1, 128}"];
+75[label="Name: CGNet__stage3_1_f_glo1_fc1_bias
+Type: const-fix
+Tensor: CGNet__stage3_1_f_glo1_fc1_bias_fix
+Shape: {8}"];
+274[label="Name: CGNet__CGNet_ContextGuidedBlock_stage3_1___FG
+lo1_f_glo1__Conv2d_fc1__input_87
+Type: conv2d-fix
+Tensor: CGNet__CGNet_ContextGuidedBlock_stage3_1__
+_FGlo1_f_glo1__ReLU_relu__input_88_fix
+Shape: {1, 34, 46, 8}"];
+74 -> 274;
+75 -> 274;
+}
+subgraph clustersubgraph36 {
+graph [
+label=subgraph_CGNet__CGNet_ContextGuidedBlock_stage3_2__input_98];
+node [
+shape=box, style=rounded, width=x];
+276[label="Name: CGNet__CGNet_ContextGuidedBlock_stage3_2__inp
+ut_98
+Type: concat-fix
+Tensor: CGNet__CGNet_ContextGuidedBlock_stage3_2__
+input_98_fix
+Shape: {1, 34, 46, 128}"];
+}
+subgraph clustersubgraph37 {
+graph [
+label=subgraph_CGNet__CGNet_ContextGuidedBlock_stage3_2___ChannelWiseConv_f_loc__Conv2d_conv__input_94];
+node [
+shape=box, style=rounded, width=x];
+78[label="Name: CGNet__stage3_2_conv_conv_weight
+Type: const-fix
+Tensor: CGNet__stage3_2_conv_conv_weight_fix
+Shape: {64, 1, 1, 128}"];
+79[label="Name: CGNet__stage3_2_conv_conv_weight_bias
+Type: const-fix
+Tensor: CGNet__stage3_2_conv_conv_weight_bias_fix
+Shape: {64}"];
+80[label="Name: CGNet__stage3_2_f_loc_conv_weight
+Type: const-fix
+Tensor: CGNet__stage3_2_f_loc_conv_weight_fix
+Shape: {1, 3, 3, 64}"];
+81[label="Name: CGNet__stage3_2_f_loc_conv_weight_bias
+Type: const-fix
+Tensor: CGNet__stage3_2_f_loc_conv_weight_bias_fix
+Shape: {64}"];
+277[label="Name: CGNet__CGNet_ContextGuidedBlock_stage3_2___Co
+nvBNLeakyReLU_conv__Conv2d_conv__input_91
+Type: conv2d-fix
+Tensor: CGNet__CGNet_ContextGuidedBlock_stage3_2__
+_ConvBNLeakyReLU_conv__LeakyReLU_leakyrelu__input_
+93_fix
+Shape: {1, 34, 46, 64}"];
+278[label="Name: CGNet__CGNet_ContextGuidedBlock_stage3_2___Ch
+annelWiseConv_f_loc__Conv2d_conv__input_94
+Type: depthwise-conv2d-fix
+Tensor: CGNet__CGNet_ContextGuidedBlock_stage3_2__
+_BNLeakyReLU_reduction_bnlr__ReLU_leakyrelu__1182_
+inserted_fix_16
+Shape: {1, 34, 46, 64}"];
+78 -> 277;
+79 -> 277;
+80 -> 278;
+81 -> 278;
+277 -> 278;
+}
+subgraph clustersubgraph38 {
+graph [
+label=subgraph_CGNet__CGNet_ContextGuidedBlock_stage3_2___ChannelWiseConv_f_sur__Conv2d_conv__input_96];
+node [
+shape=box, style=rounded, width=x];
+82[label="Name: CGNet__stage3_2_f_sur_conv_weight
+Type: const-fix
+Tensor: CGNet__stage3_2_f_sur_conv_weight_fix
+Shape: {1, 3, 3, 64}"];
+83[label="Name: CGNet__stage3_2_f_sur_conv_weight_bias
+Type: const-fix
+Tensor: CGNet__stage3_2_f_sur_conv_weight_bias_fix
+Shape: {64}"];
+279[label="Name: CGNet__CGNet_ContextGuidedBlock_stage3_2___Ch
+annelWiseConv_f_sur__Conv2d_conv__input_96
+Type: depthwise-conv2d-fix
+Tensor: CGNet__CGNet_ContextGuidedBlock_stage3_2__
+_BNLeakyReLU_reduction_bnlr__ReLU_leakyrelu__1188_
+inserted_fix_17
+Shape: {1, 34, 46, 64}"];
+82 -> 279;
+83 -> 279;
+}
+subgraph clustersubgraph39 {
+graph [
+label=subgraph_CGNet__CGNet_ContextGuidedBlock_stage3_2___FGlo1_f_glo1__Conv2d_fc2__input_101];
+node [
+shape=box, style=rounded, width=x];
+86[label="Name: CGNet__stage3_2_f_glo1_fc2_weight
+Type: const-fix
+Tensor: CGNet__stage3_2_f_glo1_fc2_weight_fix
+Shape: {128, 1, 1, 8}"];
+87[label="Name: CGNet__stage3_2_f_glo1_fc2_bias
+Type: const-fix
+Tensor: CGNet__stage3_2_f_glo1_fc2_bias_fix
+Shape: {128}"];
+280[label="Name: CGNet__CGNet_ContextGuidedBlock_stage3_2__inp
+ut_102
+Type: eltwise-fix
+Tensor: CGNet__CGNet_ContextGuidedBlock_stage3_2__
+input_102_fix
+Shape: {1, 34, 46, 128}"];
+282[label="Name: CGNet__CGNet_ContextGuidedBlock_stage3_2___FG
+lo1_f_glo1__Conv2d_fc2__input_101
+Type: conv2d-fix
+Tensor: CGNet__CGNet_ContextGuidedBlock_stage3_2__
+_FGlo1_f_glo1__Hardtanh_hardtanh__1215_fix
+Shape: {1, 34, 46, 128}"];
+86 -> 282;
+87 -> 282;
+282 -> 280;
+}
+subgraph clustersubgraph40 {
+graph [
+label=subgraph_CGNet__CGNet_ContextGuidedBlock_stage3_2___FGlo1_f_glo1__Conv2d_fc1__input_99];
+node [
+shape=box, style=rounded, width=x];
+84[label="Name: CGNet__stage3_2_f_glo1_fc1_weight
+Type: const-fix
+Tensor: CGNet__stage3_2_f_glo1_fc1_weight_fix
+Shape: {8, 1, 1, 128}"];
+85[label="Name: CGNet__stage3_2_f_glo1_fc1_bias
+Type: const-fix
+Tensor: CGNet__stage3_2_f_glo1_fc1_bias_fix
+Shape: {8}"];
+281[label="Name: CGNet__CGNet_ContextGuidedBlock_stage3_2___FG
+lo1_f_glo1__Conv2d_fc1__input_99
+Type: conv2d-fix
+Tensor: CGNet__CGNet_ContextGuidedBlock_stage3_2__
+_FGlo1_f_glo1__ReLU_relu__input_100_fix
+Shape: {1, 34, 46, 8}"];
+84 -> 281;
+85 -> 281;
+}
+subgraph clustersubgraph41 {
+graph [
+label=subgraph_CGNet__CGNet_ContextGuidedBlock_stage3_3__input_110];
+node [
+shape=box, style=rounded, width=x];
+283[label="Name: CGNet__CGNet_ContextGuidedBlock_stage3_3__inp
+ut_110
+Type: concat-fix
+Tensor: CGNet__CGNet_ContextGuidedBlock_stage3_3__
+input_110_fix
+Shape: {1, 34, 46, 128}"];
+}
+subgraph clustersubgraph42 {
+graph [
+label=subgraph_CGNet__CGNet_ContextGuidedBlock_stage3_3___ChannelWiseConv_f_loc__Conv2d_conv__input_106];
+node [
+shape=box, style=rounded, width=x];
+88[label="Name: CGNet__stage3_3_conv_conv_weight
+Type: const-fix
+Tensor: CGNet__stage3_3_conv_conv_weight_fix
+Shape: {64, 1, 1, 128}"];
+89[label="Name: CGNet__stage3_3_conv_conv_weight_bias
+Type: const-fix
+Tensor: CGNet__stage3_3_conv_conv_weight_bias_fix
+Shape: {64}"];
+90[label="Name: CGNet__stage3_3_f_loc_conv_weight
+Type: const-fix
+Tensor: CGNet__stage3_3_f_loc_conv_weight_fix
+Shape: {1, 3, 3, 64}"];
+91[label="Name: CGNet__stage3_3_f_loc_conv_weight_bias
+Type: const-fix
+Tensor: CGNet__stage3_3_f_loc_conv_weight_bias_fix
+Shape: {64}"];
+284[label="Name: CGNet__CGNet_ContextGuidedBlock_stage3_3___Co
+nvBNLeakyReLU_conv__Conv2d_conv__input_103
+Type: conv2d-fix
+Tensor: CGNet__CGNet_ContextGuidedBlock_stage3_3__
+_ConvBNLeakyReLU_conv__LeakyReLU_leakyrelu__input_
+105_fix
+Shape: {1, 34, 46, 64}"];
+285[label="Name: CGNet__CGNet_ContextGuidedBlock_stage3_3___Ch
+annelWiseConv_f_loc__Conv2d_conv__input_106
+Type: depthwise-conv2d-fix
+Tensor: CGNet__CGNet_ContextGuidedBlock_stage3_3__
+_BNLeakyReLU_reduction_bnlr__ReLU_leakyrelu__1263_
+inserted_fix_18
+Shape: {1, 34, 46, 64}"];
+88 -> 284;
+89 -> 284;
+90 -> 285;
+91 -> 285;
+284 -> 285;
+}
+subgraph clustersubgraph43 {
+graph [
+label=subgraph_CGNet__CGNet_ContextGuidedBlock_stage3_3___ChannelWiseConv_f_sur__Conv2d_conv__input_108];
+node [
+shape=box, style=rounded, width=x];
+92[label="Name: CGNet__stage3_3_f_sur_conv_weight
+Type: const-fix
+Tensor: CGNet__stage3_3_f_sur_conv_weight_fix
+Shape: {1, 3, 3, 64}"];
+93[label="Name: CGNet__stage3_3_f_sur_conv_weight_bias
+Type: const-fix
+Tensor: CGNet__stage3_3_f_sur_conv_weight_bias_fix
+Shape: {64}"];
+286[label="Name: CGNet__CGNet_ContextGuidedBlock_stage3_3___Ch
+annelWiseConv_f_sur__Conv2d_conv__input_108
+Type: depthwise-conv2d-fix
+Tensor: CGNet__CGNet_ContextGuidedBlock_stage3_3__
+_BNLeakyReLU_reduction_bnlr__ReLU_leakyrelu__1269_
+inserted_fix_19
+Shape: {1, 34, 46, 64}"];
+92 -> 286;
+93 -> 286;
+}
+subgraph clustersubgraph44 {
+graph [
+label=subgraph_CGNet__CGNet_ContextGuidedBlock_stage3_3___FGlo1_f_glo1__Conv2d_fc2__input_113];
+node [
+shape=box, style=rounded, width=x];
+96[label="Name: CGNet__stage3_3_f_glo1_fc2_weight
+Type: const-fix
+Tensor: CGNet__stage3_3_f_glo1_fc2_weight_fix
+Shape: {128, 1, 1, 8}"];
+97[label="Name: CGNet__stage3_3_f_glo1_fc2_bias
+Type: const-fix
+Tensor: CGNet__stage3_3_f_glo1_fc2_bias_fix
+Shape: {128}"];
+287[label="Name: CGNet__CGNet_ContextGuidedBlock_stage3_3__inp
+ut_114
+Type: eltwise-fix
+Tensor: CGNet__CGNet_ContextGuidedBlock_stage3_3__
+input_114_fix
+Shape: {1, 34, 46, 128}"];
+289[label="Name: CGNet__CGNet_ContextGuidedBlock_stage3_3___FG
+lo1_f_glo1__Conv2d_fc2__input_113
+Type: conv2d-fix
+Tensor: CGNet__CGNet_ContextGuidedBlock_stage3_3__
+_FGlo1_f_glo1__Hardtanh_hardtanh__1296_fix
+Shape: {1, 34, 46, 128}"];
+96 -> 289;
+97 -> 289;
+289 -> 287;
+}
+subgraph clustersubgraph45 {
+graph [
+label=subgraph_CGNet__CGNet_ContextGuidedBlock_stage3_3___FGlo1_f_glo1__Conv2d_fc1__input_111];
+node [
+shape=box, style=rounded, width=x];
+94[label="Name: CGNet__stage3_3_f_glo1_fc1_weight
+Type: const-fix
+Tensor: CGNet__stage3_3_f_glo1_fc1_weight_fix
+Shape: {8, 1, 1, 128}"];
+95[label="Name: CGNet__stage3_3_f_glo1_fc1_bias
+Type: const-fix
+Tensor: CGNet__stage3_3_f_glo1_fc1_bias_fix
+Shape: {8}"];
+288[label="Name: CGNet__CGNet_ContextGuidedBlock_stage3_3___FG
+lo1_f_glo1__Conv2d_fc1__input_111
+Type: conv2d-fix
+Tensor: CGNet__CGNet_ContextGuidedBlock_stage3_3__
+_FGlo1_f_glo1__ReLU_relu__input_112_fix
+Shape: {1, 34, 46, 8}"];
+94 -> 288;
+95 -> 288;
+}
+subgraph clustersubgraph46 {
+graph [
+label=subgraph_CGNet__CGNet_ContextGuidedBlock_stage3_4__input_122];
+node [
+shape=box, style=rounded, width=x];
+290[label="Name: CGNet__CGNet_ContextGuidedBlock_stage3_4__inp
+ut_122
+Type: concat-fix
+Tensor: CGNet__CGNet_ContextGuidedBlock_stage3_4__
+input_122_fix
+Shape: {1, 34, 46, 128}"];
+}
+subgraph clustersubgraph47 {
+graph [
+label=subgraph_CGNet__CGNet_ContextGuidedBlock_stage3_4___ChannelWiseConv_f_loc__Conv2d_conv__input_118];
+node [
+shape=box, style=rounded, width=x];
+98[label="Name: CGNet__stage3_4_conv_conv_weight
+Type: const-fix
+Tensor: CGNet__stage3_4_conv_conv_weight_fix
+Shape: {64, 1, 1, 128}"];
+99[label="Name: CGNet__stage3_4_conv_conv_weight_bias
+Type: const-fix
+Tensor: CGNet__stage3_4_conv_conv_weight_bias_fix
+Shape: {64}"];
+100[label="Name: CGNet__stage3_4_f_loc_conv_weight
+Type: const-fix
+Tensor: CGNet__stage3_4_f_loc_conv_weight_fix
+Shape: {1, 3, 3, 64}"];
+101[label="Name: CGNet__stage3_4_f_loc_conv_weight_bias
+Type: const-fix
+Tensor: CGNet__stage3_4_f_loc_conv_weight_bias_fix
+Shape: {64}"];
+291[label="Name: CGNet__CGNet_ContextGuidedBlock_stage3_4___Co
+nvBNLeakyReLU_conv__Conv2d_conv__input_115
+Type: conv2d-fix
+Tensor: CGNet__CGNet_ContextGuidedBlock_stage3_4__
+_ConvBNLeakyReLU_conv__LeakyReLU_leakyrelu__input_
+117_fix
+Shape: {1, 34, 46, 64}"];
+292[label="Name: CGNet__CGNet_ContextGuidedBlock_stage3_4___Ch
+annelWiseConv_f_loc__Conv2d_conv__input_118
+Type: depthwise-conv2d-fix
+Tensor: CGNet__CGNet_ContextGuidedBlock_stage3_4__
+_BNLeakyReLU_reduction_bnlr__ReLU_leakyrelu__1344_
+inserted_fix_20
+Shape: {1, 34, 46, 64}"];
+98 -> 291;
+99 -> 291;
+100 -> 292;
+101 -> 292;
+291 -> 292;
+}
+subgraph clustersubgraph48 {
+graph [
+label=subgraph_CGNet__CGNet_ContextGuidedBlock_stage3_4___ChannelWiseConv_f_sur__Conv2d_conv__input_120];
+node [
+shape=box, style=rounded, width=x];
+102[label="Name: CGNet__stage3_4_f_sur_conv_weight
+Type: const-fix
+Tensor: CGNet__stage3_4_f_sur_conv_weight_fix
+Shape: {1, 3, 3, 64}"];
+103[label="Name: CGNet__stage3_4_f_sur_conv_weight_bias
+Type: const-fix
+Tensor: CGNet__stage3_4_f_sur_conv_weight_bias_fix
+Shape: {64}"];
+293[label="Name: CGNet__CGNet_ContextGuidedBlock_stage3_4___Ch
+annelWiseConv_f_sur__Conv2d_conv__input_120
+Type: depthwise-conv2d-fix
+Tensor: CGNet__CGNet_ContextGuidedBlock_stage3_4__
+_BNLeakyReLU_reduction_bnlr__ReLU_leakyrelu__1350_
+inserted_fix_21
+Shape: {1, 34, 46, 64}"];
+102 -> 293;
+103 -> 293;
+}
+subgraph clustersubgraph49 {
+graph [
+label=subgraph_CGNet__CGNet_ContextGuidedBlock_stage3_4___FGlo1_f_glo1__Conv2d_fc2__input_125];
+node [
+shape=box, style=rounded, width=x];
+106[label="Name: CGNet__stage3_4_f_glo1_fc2_weight
+Type: const-fix
+Tensor: CGNet__stage3_4_f_glo1_fc2_weight_fix
+Shape: {128, 1, 1, 8}"];
+107[label="Name: CGNet__stage3_4_f_glo1_fc2_bias
+Type: const-fix
+Tensor: CGNet__stage3_4_f_glo1_fc2_bias_fix
+Shape: {128}"];
+294[label="Name: CGNet__CGNet_ContextGuidedBlock_stage3_4__inp
+ut_126
+Type: eltwise-fix
+Tensor: CGNet__CGNet_ContextGuidedBlock_stage3_4__
+input_126_fix
+Shape: {1, 34, 46, 128}"];
+296[label="Name: CGNet__CGNet_ContextGuidedBlock_stage3_4___FG
+lo1_f_glo1__Conv2d_fc2__input_125
+Type: conv2d-fix
+Tensor: CGNet__CGNet_ContextGuidedBlock_stage3_4__
+_FGlo1_f_glo1__Hardtanh_hardtanh__1377_fix
+Shape: {1, 34, 46, 128}"];
+106 -> 296;
+107 -> 296;
+296 -> 294;
+}
+subgraph clustersubgraph50 {
+graph [
+label=subgraph_CGNet__CGNet_ContextGuidedBlock_stage3_4___FGlo1_f_glo1__Conv2d_fc1__input_123];
+node [
+shape=box, style=rounded, width=x];
+104[label="Name: CGNet__stage3_4_f_glo1_fc1_weight
+Type: const-fix
+Tensor: CGNet__stage3_4_f_glo1_fc1_weight_fix
+Shape: {8, 1, 1, 128}"];
+105[label="Name: CGNet__stage3_4_f_glo1_fc1_bias
+Type: const-fix
+Tensor: CGNet__stage3_4_f_glo1_fc1_bias_fix
+Shape: {8}"];
+295[label="Name: CGNet__CGNet_ContextGuidedBlock_stage3_4___FG
+lo1_f_glo1__Conv2d_fc1__input_123
+Type: conv2d-fix
+Tensor: CGNet__CGNet_ContextGuidedBlock_stage3_4__
+_FGlo1_f_glo1__ReLU_relu__input_124_fix
+Shape: {1, 34, 46, 8}"];
+104 -> 295;
+105 -> 295;
+}
+subgraph clustersubgraph51 {
+graph [
+label=subgraph_CGNet__CGNet_ContextGuidedBlock_stage3_5__input_134];
+node [
+shape=box, style=rounded, width=x];
+297[label="Name: CGNet__CGNet_ContextGuidedBlock_stage3_5__inp
+ut_134
+Type: concat-fix
+Tensor: CGNet__CGNet_ContextGuidedBlock_stage3_5__
+input_134_fix
+Shape: {1, 34, 46, 128}"];
+}
+subgraph clustersubgraph52 {
+graph [
+label=subgraph_CGNet__CGNet_ContextGuidedBlock_stage3_5___ChannelWiseConv_f_loc__Conv2d_conv__input_130];
+node [
+shape=box, style=rounded, width=x];
+108[label="Name: CGNet__stage3_5_conv_conv_weight
+Type: const-fix
+Tensor: CGNet__stage3_5_conv_conv_weight_fix
+Shape: {64, 1, 1, 128}"];
+109[label="Name: CGNet__stage3_5_conv_conv_weight_bias
+Type: const-fix
+Tensor: CGNet__stage3_5_conv_conv_weight_bias_fix
+Shape: {64}"];
+110[label="Name: CGNet__stage3_5_f_loc_conv_weight
+Type: const-fix
+Tensor: CGNet__stage3_5_f_loc_conv_weight_fix
+Shape: {1, 3, 3, 64}"];
+111[label="Name: CGNet__stage3_5_f_loc_conv_weight_bias
+Type: const-fix
+Tensor: CGNet__stage3_5_f_loc_conv_weight_bias_fix
+Shape: {64}"];
+298[label="Name: CGNet__CGNet_ContextGuidedBlock_stage3_5___Co
+nvBNLeakyReLU_conv__Conv2d_conv__input_127
+Type: conv2d-fix
+Tensor: CGNet__CGNet_ContextGuidedBlock_stage3_5__
+_ConvBNLeakyReLU_conv__LeakyReLU_leakyrelu__input_
+129_fix
+Shape: {1, 34, 46, 64}"];
+299[label="Name: CGNet__CGNet_ContextGuidedBlock_stage3_5___Ch
+annelWiseConv_f_loc__Conv2d_conv__input_130
+Type: depthwise-conv2d-fix
+Tensor: CGNet__CGNet_ContextGuidedBlock_stage3_5__
+_BNLeakyReLU_reduction_bnlr__ReLU_leakyrelu__1425_
+inserted_fix_22
+Shape: {1, 34, 46, 64}"];
+108 -> 298;
+109 -> 298;
+110 -> 299;
+111 -> 299;
+298 -> 299;
+}
+subgraph clustersubgraph53 {
+graph [
+label=subgraph_CGNet__CGNet_ContextGuidedBlock_stage3_5___ChannelWiseConv_f_sur__Conv2d_conv__input_132];
+node [
+shape=box, style=rounded, width=x];
+112[label="Name: CGNet__stage3_5_f_sur_conv_weight
+Type: const-fix
+Tensor: CGNet__stage3_5_f_sur_conv_weight_fix
+Shape: {1, 3, 3, 64}"];
+113[label="Name: CGNet__stage3_5_f_sur_conv_weight_bias
+Type: const-fix
+Tensor: CGNet__stage3_5_f_sur_conv_weight_bias_fix
+Shape: {64}"];
+300[label="Name: CGNet__CGNet_ContextGuidedBlock_stage3_5___Ch
+annelWiseConv_f_sur__Conv2d_conv__input_132
+Type: depthwise-conv2d-fix
+Tensor: CGNet__CGNet_ContextGuidedBlock_stage3_5__
+_BNLeakyReLU_reduction_bnlr__ReLU_leakyrelu__1431_
+inserted_fix_23
+Shape: {1, 34, 46, 64}"];
+112 -> 300;
+113 -> 300;
+}
+subgraph clustersubgraph54 {
+graph [
+label=subgraph_CGNet__CGNet_ContextGuidedBlock_stage3_5___FGlo1_f_glo1__Conv2d_fc2__input_137];
+node [
+shape=box, style=rounded, width=x];
+116[label="Name: CGNet__stage3_5_f_glo1_fc2_weight
+Type: const-fix
+Tensor: CGNet__stage3_5_f_glo1_fc2_weight_fix
+Shape: {128, 1, 1, 8}"];
+117[label="Name: CGNet__stage3_5_f_glo1_fc2_bias
+Type: const-fix
+Tensor: CGNet__stage3_5_f_glo1_fc2_bias_fix
+Shape: {128}"];
+301[label="Name: CGNet__CGNet_ContextGuidedBlock_stage3_5__inp
+ut_138
+Type: eltwise-fix
+Tensor: CGNet__CGNet_ContextGuidedBlock_stage3_5__
+input_138_fix
+Shape: {1, 34, 46, 128}"];
+303[label="Name: CGNet__CGNet_ContextGuidedBlock_stage3_5___FG
+lo1_f_glo1__Conv2d_fc2__input_137
+Type: conv2d-fix
+Tensor: CGNet__CGNet_ContextGuidedBlock_stage3_5__
+_FGlo1_f_glo1__Hardtanh_hardtanh__1458_fix
+Shape: {1, 34, 46, 128}"];
+116 -> 303;
+117 -> 303;
+303 -> 301;
+}
+subgraph clustersubgraph55 {
+graph [
+label=subgraph_CGNet__CGNet_ContextGuidedBlock_stage3_5___FGlo1_f_glo1__Conv2d_fc1__input_135];
+node [
+shape=box, style=rounded, width=x];
+114[label="Name: CGNet__stage3_5_f_glo1_fc1_weight
+Type: const-fix
+Tensor: CGNet__stage3_5_f_glo1_fc1_weight_fix
+Shape: {8, 1, 1, 128}"];
+115[label="Name: CGNet__stage3_5_f_glo1_fc1_bias
+Type: const-fix
+Tensor: CGNet__stage3_5_f_glo1_fc1_bias_fix
+Shape: {8}"];
+302[label="Name: CGNet__CGNet_ContextGuidedBlock_stage3_5___FG
+lo1_f_glo1__Conv2d_fc1__input_135
+Type: conv2d-fix
+Tensor: CGNet__CGNet_ContextGuidedBlock_stage3_5__
+_FGlo1_f_glo1__ReLU_relu__input_136_fix
+Shape: {1, 34, 46, 8}"];
+114 -> 302;
+115 -> 302;
+}
+subgraph clustersubgraph56 {
+graph [
+label=subgraph_CGNet__CGNet_ContextGuidedBlock_stage3_6__input_146];
+node [
+shape=box, style=rounded, width=x];
+304[label="Name: CGNet__CGNet_ContextGuidedBlock_stage3_6__inp
+ut_146
+Type: concat-fix
+Tensor: CGNet__CGNet_ContextGuidedBlock_stage3_6__
+input_146_fix
+Shape: {1, 34, 46, 128}"];
+}
+subgraph clustersubgraph57 {
+graph [
+label=subgraph_CGNet__CGNet_ContextGuidedBlock_stage3_6___ChannelWiseConv_f_loc__Conv2d_conv__input_142];
+node [
+shape=box, style=rounded, width=x];
+118[label="Name: CGNet__stage3_6_conv_conv_weight
+Type: const-fix
+Tensor: CGNet__stage3_6_conv_conv_weight_fix
+Shape: {64, 1, 1, 128}"];
+119[label="Name: CGNet__stage3_6_conv_conv_weight_bias
+Type: const-fix
+Tensor: CGNet__stage3_6_conv_conv_weight_bias_fix
+Shape: {64}"];
+120[label="Name: CGNet__stage3_6_f_loc_conv_weight
+Type: const-fix
+Tensor: CGNet__stage3_6_f_loc_conv_weight_fix
+Shape: {1, 3, 3, 64}"];
+121[label="Name: CGNet__stage3_6_f_loc_conv_weight_bias
+Type: const-fix
+Tensor: CGNet__stage3_6_f_loc_conv_weight_bias_fix
+Shape: {64}"];
+305[label="Name: CGNet__CGNet_ContextGuidedBlock_stage3_6___Co
+nvBNLeakyReLU_conv__Conv2d_conv__input_139
+Type: conv2d-fix
+Tensor: CGNet__CGNet_ContextGuidedBlock_stage3_6__
+_ConvBNLeakyReLU_conv__LeakyReLU_leakyrelu__input_
+141_fix
+Shape: {1, 34, 46, 64}"];
+306[label="Name: CGNet__CGNet_ContextGuidedBlock_stage3_6___Ch
+annelWiseConv_f_loc__Conv2d_conv__input_142
+Type: depthwise-conv2d-fix
+Tensor: CGNet__CGNet_ContextGuidedBlock_stage3_6__
+_BNLeakyReLU_reduction_bnlr__ReLU_leakyrelu__1506_
+inserted_fix_24
+Shape: {1, 34, 46, 64}"];
+118 -> 305;
+119 -> 305;
+120 -> 306;
+121 -> 306;
+305 -> 306;
+}
+subgraph clustersubgraph58 {
+graph [
+label=subgraph_CGNet__CGNet_ContextGuidedBlock_stage3_6___ChannelWiseConv_f_sur__Conv2d_conv__input_144];
+node [
+shape=box, style=rounded, width=x];
+122[label="Name: CGNet__stage3_6_f_sur_conv_weight
+Type: const-fix
+Tensor: CGNet__stage3_6_f_sur_conv_weight_fix
+Shape: {1, 3, 3, 64}"];
+123[label="Name: CGNet__stage3_6_f_sur_conv_weight_bias
+Type: const-fix
+Tensor: CGNet__stage3_6_f_sur_conv_weight_bias_fix
+Shape: {64}"];
+307[label="Name: CGNet__CGNet_ContextGuidedBlock_stage3_6___Ch
+annelWiseConv_f_sur__Conv2d_conv__input_144
+Type: depthwise-conv2d-fix
+Tensor: CGNet__CGNet_ContextGuidedBlock_stage3_6__
+_BNLeakyReLU_reduction_bnlr__ReLU_leakyrelu__1512_
+inserted_fix_25
+Shape: {1, 34, 46, 64}"];
+122 -> 307;
+123 -> 307;
+}
+subgraph clustersubgraph59 {
+graph [
+label=subgraph_CGNet__CGNet_ContextGuidedBlock_stage3_6___FGlo1_f_glo1__Conv2d_fc2__input_149];
+node [
+shape=box, style=rounded, width=x];
+126[label="Name: CGNet__stage3_6_f_glo1_fc2_weight
+Type: const-fix
+Tensor: CGNet__stage3_6_f_glo1_fc2_weight_fix
+Shape: {128, 1, 1, 8}"];
+127[label="Name: CGNet__stage3_6_f_glo1_fc2_bias
+Type: const-fix
+Tensor: CGNet__stage3_6_f_glo1_fc2_bias_fix
+Shape: {128}"];
+308[label="Name: CGNet__CGNet_ContextGuidedBlock_stage3_6__inp
+ut_150
+Type: eltwise-fix
+Tensor: CGNet__CGNet_ContextGuidedBlock_stage3_6__
+input_150_fix
+Shape: {1, 34, 46, 128}"];
+310[label="Name: CGNet__CGNet_ContextGuidedBlock_stage3_6___FG
+lo1_f_glo1__Conv2d_fc2__input_149
+Type: conv2d-fix
+Tensor: CGNet__CGNet_ContextGuidedBlock_stage3_6__
+_FGlo1_f_glo1__Hardtanh_hardtanh__1539_fix
+Shape: {1, 34, 46, 128}"];
+126 -> 310;
+127 -> 310;
+310 -> 308;
+}
+subgraph clustersubgraph60 {
+graph [
+label=subgraph_CGNet__CGNet_ContextGuidedBlock_stage3_6___FGlo1_f_glo1__Conv2d_fc1__input_147];
+node [
+shape=box, style=rounded, width=x];
+124[label="Name: CGNet__stage3_6_f_glo1_fc1_weight
+Type: const-fix
+Tensor: CGNet__stage3_6_f_glo1_fc1_weight_fix
+Shape: {8, 1, 1, 128}"];
+125[label="Name: CGNet__stage3_6_f_glo1_fc1_bias
+Type: const-fix
+Tensor: CGNet__stage3_6_f_glo1_fc1_bias_fix
+Shape: {8}"];
+309[label="Name: CGNet__CGNet_ContextGuidedBlock_stage3_6___FG
+lo1_f_glo1__Conv2d_fc1__input_147
+Type: conv2d-fix
+Tensor: CGNet__CGNet_ContextGuidedBlock_stage3_6__
+_FGlo1_f_glo1__ReLU_relu__input_148_fix
+Shape: {1, 34, 46, 8}"];
+124 -> 309;
+125 -> 309;
+}
+subgraph clustersubgraph61 {
+graph [
+label=subgraph_CGNet__CGNet_ContextGuidedBlock_stage3_7__input_158];
+node [
+shape=box, style=rounded, width=x];
+311[label="Name: CGNet__CGNet_ContextGuidedBlock_stage3_7__inp
+ut_158
+Type: concat-fix
+Tensor: CGNet__CGNet_ContextGuidedBlock_stage3_7__
+input_158_fix
+Shape: {1, 34, 46, 128}"];
+}
+subgraph clustersubgraph62 {
+graph [
+label=subgraph_CGNet__CGNet_ContextGuidedBlock_stage3_7___ChannelWiseConv_f_loc__Conv2d_conv__input_154];
+node [
+shape=box, style=rounded, width=x];
+128[label="Name: CGNet__stage3_7_conv_conv_weight
+Type: const-fix
+Tensor: CGNet__stage3_7_conv_conv_weight_fix
+Shape: {64, 1, 1, 128}"];
+129[label="Name: CGNet__stage3_7_conv_conv_weight_bias
+Type: const-fix
+Tensor: CGNet__stage3_7_conv_conv_weight_bias_fix
+Shape: {64}"];
+130[label="Name: CGNet__stage3_7_f_loc_conv_weight
+Type: const-fix
+Tensor: CGNet__stage3_7_f_loc_conv_weight_fix
+Shape: {1, 3, 3, 64}"];
+131[label="Name: CGNet__stage3_7_f_loc_conv_weight_bias
+Type: const-fix
+Tensor: CGNet__stage3_7_f_loc_conv_weight_bias_fix
+Shape: {64}"];
+312[label="Name: CGNet__CGNet_ContextGuidedBlock_stage3_7___Co
+nvBNLeakyReLU_conv__Conv2d_conv__input_151
+Type: conv2d-fix
+Tensor: CGNet__CGNet_ContextGuidedBlock_stage3_7__
+_ConvBNLeakyReLU_conv__LeakyReLU_leakyrelu__input_
+153_fix
+Shape: {1, 34, 46, 64}"];
+313[label="Name: CGNet__CGNet_ContextGuidedBlock_stage3_7___Ch
+annelWiseConv_f_loc__Conv2d_conv__input_154
+Type: depthwise-conv2d-fix
+Tensor: CGNet__CGNet_ContextGuidedBlock_stage3_7__
+_BNLeakyReLU_reduction_bnlr__ReLU_leakyrelu__1587_
+inserted_fix_26
+Shape: {1, 34, 46, 64}"];
+128 -> 312;
+129 -> 312;
+130 -> 313;
+131 -> 313;
+312 -> 313;
+}
+subgraph clustersubgraph63 {
+graph [
+label=subgraph_CGNet__CGNet_ContextGuidedBlock_stage3_7___ChannelWiseConv_f_sur__Conv2d_conv__input_156];
+node [
+shape=box, style=rounded, width=x];
+132[label="Name: CGNet__stage3_7_f_sur_conv_weight
+Type: const-fix
+Tensor: CGNet__stage3_7_f_sur_conv_weight_fix
+Shape: {1, 3, 3, 64}"];
+133[label="Name: CGNet__stage3_7_f_sur_conv_weight_bias
+Type: const-fix
+Tensor: CGNet__stage3_7_f_sur_conv_weight_bias_fix
+Shape: {64}"];
+314[label="Name: CGNet__CGNet_ContextGuidedBlock_stage3_7___Ch
+annelWiseConv_f_sur__Conv2d_conv__input_156
+Type: depthwise-conv2d-fix
+Tensor: CGNet__CGNet_ContextGuidedBlock_stage3_7__
+_BNLeakyReLU_reduction_bnlr__ReLU_leakyrelu__1593_
+inserted_fix_27
+Shape: {1, 34, 46, 64}"];
+132 -> 314;
+133 -> 314;
+}
+subgraph clustersubgraph64 {
+graph [
+label=subgraph_CGNet__CGNet_ContextGuidedBlock_stage3_7___FGlo1_f_glo1__Conv2d_fc2__input_161];
+node [
+shape=box, style=rounded, width=x];
+136[label="Name: CGNet__stage3_7_f_glo1_fc2_weight
+Type: const-fix
+Tensor: CGNet__stage3_7_f_glo1_fc2_weight_fix
+Shape: {128, 1, 1, 8}"];
+137[label="Name: CGNet__stage3_7_f_glo1_fc2_bias
+Type: const-fix
+Tensor: CGNet__stage3_7_f_glo1_fc2_bias_fix
+Shape: {128}"];
+315[label="Name: CGNet__CGNet_ContextGuidedBlock_stage3_7__inp
+ut_162
+Type: eltwise-fix
+Tensor: CGNet__CGNet_ContextGuidedBlock_stage3_7__
+input_162_fix
+Shape: {1, 34, 46, 128}"];
+317[label="Name: CGNet__CGNet_ContextGuidedBlock_stage3_7___FG
+lo1_f_glo1__Conv2d_fc2__input_161
+Type: conv2d-fix
+Tensor: CGNet__CGNet_ContextGuidedBlock_stage3_7__
+_FGlo1_f_glo1__Hardtanh_hardtanh__1620_fix
+Shape: {1, 34, 46, 128}"];
+136 -> 317;
+137 -> 317;
+317 -> 315;
+}
+subgraph clustersubgraph65 {
+graph [
+label=subgraph_CGNet__CGNet_ContextGuidedBlock_stage3_7___FGlo1_f_glo1__Conv2d_fc1__input_159];
+node [
+shape=box, style=rounded, width=x];
+134[label="Name: CGNet__stage3_7_f_glo1_fc1_weight
+Type: const-fix
+Tensor: CGNet__stage3_7_f_glo1_fc1_weight_fix
+Shape: {8, 1, 1, 128}"];
+135[label="Name: CGNet__stage3_7_f_glo1_fc1_bias
+Type: const-fix
+Tensor: CGNet__stage3_7_f_glo1_fc1_bias_fix
+Shape: {8}"];
+316[label="Name: CGNet__CGNet_ContextGuidedBlock_stage3_7___FG
+lo1_f_glo1__Conv2d_fc1__input_159
+Type: conv2d-fix
+Tensor: CGNet__CGNet_ContextGuidedBlock_stage3_7__
+_FGlo1_f_glo1__ReLU_relu__input_160_fix
+Shape: {1, 34, 46, 8}"];
+134 -> 316;
+135 -> 316;
+}
+subgraph clustersubgraph66 {
+graph [
+label=subgraph_CGNet__CGNet_ContextGuidedBlock_stage3_8__input_170];
+node [
+shape=box, style=rounded, width=x];
+318[label="Name: CGNet__CGNet_ContextGuidedBlock_stage3_8__inp
+ut_170
+Type: concat-fix
+Tensor: CGNet__CGNet_ContextGuidedBlock_stage3_8__
+input_170_fix
+Shape: {1, 34, 46, 128}"];
+}
+subgraph clustersubgraph67 {
+graph [
+label=subgraph_CGNet__CGNet_ContextGuidedBlock_stage3_8___ChannelWiseConv_f_loc__Conv2d_conv__input_166];
+node [
+shape=box, style=rounded, width=x];
+138[label="Name: CGNet__stage3_8_conv_conv_weight
+Type: const-fix
+Tensor: CGNet__stage3_8_conv_conv_weight_fix
+Shape: {64, 1, 1, 128}"];
+139[label="Name: CGNet__stage3_8_conv_conv_weight_bias
+Type: const-fix
+Tensor: CGNet__stage3_8_conv_conv_weight_bias_fix
+Shape: {64}"];
+140[label="Name: CGNet__stage3_8_f_loc_conv_weight
+Type: const-fix
+Tensor: CGNet__stage3_8_f_loc_conv_weight_fix
+Shape: {1, 3, 3, 64}"];
+141[label="Name: CGNet__stage3_8_f_loc_conv_weight_bias
+Type: const-fix
+Tensor: CGNet__stage3_8_f_loc_conv_weight_bias_fix
+Shape: {64}"];
+319[label="Name: CGNet__CGNet_ContextGuidedBlock_stage3_8___Co
+nvBNLeakyReLU_conv__Conv2d_conv__input_163
+Type: conv2d-fix
+Tensor: CGNet__CGNet_ContextGuidedBlock_stage3_8__
+_ConvBNLeakyReLU_conv__LeakyReLU_leakyrelu__input_
+165_fix
+Shape: {1, 34, 46, 64}"];
+320[label="Name: CGNet__CGNet_ContextGuidedBlock_stage3_8___Ch
+annelWiseConv_f_loc__Conv2d_conv__input_166
+Type: depthwise-conv2d-fix
+Tensor: CGNet__CGNet_ContextGuidedBlock_stage3_8__
+_BNLeakyReLU_reduction_bnlr__ReLU_leakyrelu__1668_
+inserted_fix_28
+Shape: {1, 34, 46, 64}"];
+138 -> 319;
+139 -> 319;
+140 -> 320;
+141 -> 320;
+319 -> 320;
+}
+subgraph clustersubgraph68 {
+graph [
+label=subgraph_CGNet__CGNet_ContextGuidedBlock_stage3_8___ChannelWiseConv_f_sur__Conv2d_conv__input_168];
+node [
+shape=box, style=rounded, width=x];
+142[label="Name: CGNet__stage3_8_f_sur_conv_weight
+Type: const-fix
+Tensor: CGNet__stage3_8_f_sur_conv_weight_fix
+Shape: {1, 3, 3, 64}"];
+143[label="Name: CGNet__stage3_8_f_sur_conv_weight_bias
+Type: const-fix
+Tensor: CGNet__stage3_8_f_sur_conv_weight_bias_fix
+Shape: {64}"];
+321[label="Name: CGNet__CGNet_ContextGuidedBlock_stage3_8___Ch
+annelWiseConv_f_sur__Conv2d_conv__input_168
+Type: depthwise-conv2d-fix
+Tensor: CGNet__CGNet_ContextGuidedBlock_stage3_8__
+_BNLeakyReLU_reduction_bnlr__ReLU_leakyrelu__1674_
+inserted_fix_29
+Shape: {1, 34, 46, 64}"];
+142 -> 321;
+143 -> 321;
+}
+subgraph clustersubgraph69 {
+graph [
+label=subgraph_CGNet__CGNet_ContextGuidedBlock_stage3_8___FGlo1_f_glo1__Conv2d_fc2__input_173];
+node [
+shape=box, style=rounded, width=x];
+146[label="Name: CGNet__stage3_8_f_glo1_fc2_weight
+Type: const-fix
+Tensor: CGNet__stage3_8_f_glo1_fc2_weight_fix
+Shape: {128, 1, 1, 8}"];
+147[label="Name: CGNet__stage3_8_f_glo1_fc2_bias
+Type: const-fix
+Tensor: CGNet__stage3_8_f_glo1_fc2_bias_fix
+Shape: {128}"];
+322[label="Name: CGNet__CGNet_ContextGuidedBlock_stage3_8__inp
+ut_174
+Type: eltwise-fix
+Tensor: CGNet__CGNet_ContextGuidedBlock_stage3_8__
+input_174_fix
+Shape: {1, 34, 46, 128}"];
+324[label="Name: CGNet__CGNet_ContextGuidedBlock_stage3_8___FG
+lo1_f_glo1__Conv2d_fc2__input_173
+Type: conv2d-fix
+Tensor: CGNet__CGNet_ContextGuidedBlock_stage3_8__
+_FGlo1_f_glo1__Hardtanh_hardtanh__1701_fix
+Shape: {1, 34, 46, 128}"];
+146 -> 324;
+147 -> 324;
+324 -> 322;
+}
+subgraph clustersubgraph70 {
+graph [
+label=subgraph_CGNet__CGNet_ContextGuidedBlock_stage3_8___FGlo1_f_glo1__Conv2d_fc1__input_171];
+node [
+shape=box, style=rounded, width=x];
+144[label="Name: CGNet__stage3_8_f_glo1_fc1_weight
+Type: const-fix
+Tensor: CGNet__stage3_8_f_glo1_fc1_weight_fix
+Shape: {8, 1, 1, 128}"];
+145[label="Name: CGNet__stage3_8_f_glo1_fc1_bias
+Type: const-fix
+Tensor: CGNet__stage3_8_f_glo1_fc1_bias_fix
+Shape: {8}"];
+323[label="Name: CGNet__CGNet_ContextGuidedBlock_stage3_8___FG
+lo1_f_glo1__Conv2d_fc1__input_171
+Type: conv2d-fix
+Tensor: CGNet__CGNet_ContextGuidedBlock_stage3_8__
+_FGlo1_f_glo1__ReLU_relu__input_172_fix
+Shape: {1, 34, 46, 8}"];
+144 -> 323;
+145 -> 323;
+}
+subgraph clustersubgraph71 {
+graph [
+label=subgraph_CGNet__CGNet_ContextGuidedBlock_stage3_9__input_182];
+node [
+shape=box, style=rounded, width=x];
+325[label="Name: CGNet__CGNet_ContextGuidedBlock_stage3_9__inp
+ut_182
+Type: concat-fix
+Tensor: CGNet__CGNet_ContextGuidedBlock_stage3_9__
+input_182_fix
+Shape: {1, 34, 46, 128}"];
+}
+subgraph clustersubgraph72 {
+graph [
+label=subgraph_CGNet__CGNet_ContextGuidedBlock_stage3_9___ChannelWiseConv_f_loc__Conv2d_conv__input_178];
+node [
+shape=box, style=rounded, width=x];
+148[label="Name: CGNet__stage3_9_conv_conv_weight
+Type: const-fix
+Tensor: CGNet__stage3_9_conv_conv_weight_fix
+Shape: {64, 1, 1, 128}"];
+149[label="Name: CGNet__stage3_9_conv_conv_weight_bias
+Type: const-fix
+Tensor: CGNet__stage3_9_conv_conv_weight_bias_fix
+Shape: {64}"];
+150[label="Name: CGNet__stage3_9_f_loc_conv_weight
+Type: const-fix
+Tensor: CGNet__stage3_9_f_loc_conv_weight_fix
+Shape: {1, 3, 3, 64}"];
+151[label="Name: CGNet__stage3_9_f_loc_conv_weight_bias
+Type: const-fix
+Tensor: CGNet__stage3_9_f_loc_conv_weight_bias_fix
+Shape: {64}"];
+326[label="Name: CGNet__CGNet_ContextGuidedBlock_stage3_9___Co
+nvBNLeakyReLU_conv__Conv2d_conv__input_175
+Type: conv2d-fix
+Tensor: CGNet__CGNet_ContextGuidedBlock_stage3_9__
+_ConvBNLeakyReLU_conv__LeakyReLU_leakyrelu__input_
+177_fix
+Shape: {1, 34, 46, 64}"];
+327[label="Name: CGNet__CGNet_ContextGuidedBlock_stage3_9___Ch
+annelWiseConv_f_loc__Conv2d_conv__input_178
+Type: depthwise-conv2d-fix
+Tensor: CGNet__CGNet_ContextGuidedBlock_stage3_9__
+_BNLeakyReLU_reduction_bnlr__ReLU_leakyrelu__1749_
+inserted_fix_30
+Shape: {1, 34, 46, 64}"];
+148 -> 326;
+149 -> 326;
+150 -> 327;
+151 -> 327;
+326 -> 327;
+}
+subgraph clustersubgraph73 {
+graph [
+label=subgraph_CGNet__CGNet_ContextGuidedBlock_stage3_9___ChannelWiseConv_f_sur__Conv2d_conv__input_180];
+node [
+shape=box, style=rounded, width=x];
+152[label="Name: CGNet__stage3_9_f_sur_conv_weight
+Type: const-fix
+Tensor: CGNet__stage3_9_f_sur_conv_weight_fix
+Shape: {1, 3, 3, 64}"];
+153[label="Name: CGNet__stage3_9_f_sur_conv_weight_bias
+Type: const-fix
+Tensor: CGNet__stage3_9_f_sur_conv_weight_bias_fix
+Shape: {64}"];
+328[label="Name: CGNet__CGNet_ContextGuidedBlock_stage3_9___Ch
+annelWiseConv_f_sur__Conv2d_conv__input_180
+Type: depthwise-conv2d-fix
+Tensor: CGNet__CGNet_ContextGuidedBlock_stage3_9__
+_BNLeakyReLU_reduction_bnlr__ReLU_leakyrelu__1755_
+inserted_fix_31
+Shape: {1, 34, 46, 64}"];
+152 -> 328;
+153 -> 328;
+}
+subgraph clustersubgraph74 {
+graph [
+label=subgraph_CGNet__CGNet_ContextGuidedBlock_stage3_9___FGlo1_f_glo1__Conv2d_fc2__input_185];
+node [
+shape=box, style=rounded, width=x];
+156[label="Name: CGNet__stage3_9_f_glo1_fc2_weight
+Type: const-fix
+Tensor: CGNet__stage3_9_f_glo1_fc2_weight_fix
+Shape: {128, 1, 1, 8}"];
+157[label="Name: CGNet__stage3_9_f_glo1_fc2_bias
+Type: const-fix
+Tensor: CGNet__stage3_9_f_glo1_fc2_bias_fix
+Shape: {128}"];
+329[label="Name: CGNet__CGNet_ContextGuidedBlock_stage3_9__inp
+ut_186
+Type: eltwise-fix
+Tensor: CGNet__CGNet_ContextGuidedBlock_stage3_9__
+input_186_fix
+Shape: {1, 34, 46, 128}"];
+331[label="Name: CGNet__CGNet_ContextGuidedBlock_stage3_9___FG
+lo1_f_glo1__Conv2d_fc2__input_185
+Type: conv2d-fix
+Tensor: CGNet__CGNet_ContextGuidedBlock_stage3_9__
+_FGlo1_f_glo1__Hardtanh_hardtanh__1782_fix
+Shape: {1, 34, 46, 128}"];
+156 -> 331;
+157 -> 331;
+331 -> 329;
+}
+subgraph clustersubgraph75 {
+graph [
+label=subgraph_CGNet__CGNet_ContextGuidedBlock_stage3_9___FGlo1_f_glo1__Conv2d_fc1__input_183];
+node [
+shape=box, style=rounded, width=x];
+154[label="Name: CGNet__stage3_9_f_glo1_fc1_weight
+Type: const-fix
+Tensor: CGNet__stage3_9_f_glo1_fc1_weight_fix
+Shape: {8, 1, 1, 128}"];
+155[label="Name: CGNet__stage3_9_f_glo1_fc1_bias
+Type: const-fix
+Tensor: CGNet__stage3_9_f_glo1_fc1_bias_fix
+Shape: {8}"];
+330[label="Name: CGNet__CGNet_ContextGuidedBlock_stage3_9___FG
+lo1_f_glo1__Conv2d_fc1__input_183
+Type: conv2d-fix
+Tensor: CGNet__CGNet_ContextGuidedBlock_stage3_9__
+_FGlo1_f_glo1__ReLU_relu__input_184_fix
+Shape: {1, 34, 46, 8}"];
+154 -> 330;
+155 -> 330;
+}
+subgraph clustersubgraph76 {
+graph [
+label=subgraph_CGNet__CGNet_ContextGuidedBlock_stage3_12___ChannelWiseConv_f_loc__Conv2d_conv__input_214];
+node [
+shape=box, style=rounded, width=x];
+178[label="Name: CGNet__stage3_12_conv_conv_weight
+Type: const-fix
+Tensor: CGNet__stage3_12_conv_conv_weight_fix
+Shape: {64, 1, 1, 128}"];
+179[label="Name: CGNet__stage3_12_conv_conv_weight_bias
+Type: const-fix
+Tensor: CGNet__stage3_12_conv_conv_weight_bias_fix
+Shape: {64}"];
+180[label="Name: CGNet__stage3_12_f_loc_conv_weight
+Type: const-fix
+Tensor: CGNet__stage3_12_f_loc_conv_weight_fix
+Shape: {1, 3, 3, 64}"];
+181[label="Name: CGNet__stage3_12_f_loc_conv_weight_bias
+Type: const-fix
+Tensor: CGNet__stage3_12_f_loc_conv_weight_bias_fi
+x
+Shape: {64}"];
+347[label="Name: CGNet__CGNet_ContextGuidedBlock_stage3_12___C
+onvBNLeakyReLU_conv__Conv2d_conv__input_211
+Type: conv2d-fix
+Tensor: CGNet__CGNet_ContextGuidedBlock_stage3_12_
+__ConvBNLeakyReLU_conv__LeakyReLU_leakyrelu__input
+_213_fix
+Shape: {1, 34, 46, 64}"];
+348[label="Name: CGNet__CGNet_ContextGuidedBlock_stage3_12___C
+hannelWiseConv_f_loc__Conv2d_conv__input_214
+Type: depthwise-conv2d-fix
+Tensor: CGNet__CGNet_ContextGuidedBlock_stage3_12_
+__BNLeakyReLU_reduction_bnlr__ReLU_leakyrelu__1992
+_inserted_fix_36
+Shape: {1, 34, 46, 64}"];
+178 -> 347;
+179 -> 347;
+180 -> 348;
+181 -> 348;
+347 -> 348;
+}
+subgraph clustersubgraph77 {
+graph [
+label=subgraph_CGNet__CGNet_ContextGuidedBlock_stage3_12___ChannelWiseConv_f_sur__Conv2d_conv__input_216];
+node [
+shape=box, style=rounded, width=x];
+182[label="Name: CGNet__stage3_12_f_sur_conv_weight
+Type: const-fix
+Tensor: CGNet__stage3_12_f_sur_conv_weight_fix
+Shape: {1, 3, 3, 64}"];
+183[label="Name: CGNet__stage3_12_f_sur_conv_weight_bias
+Type: const-fix
+Tensor: CGNet__stage3_12_f_sur_conv_weight_bias_fi
+x
+Shape: {64}"];
+349[label="Name: CGNet__CGNet_ContextGuidedBlock_stage3_12___C
+hannelWiseConv_f_sur__Conv2d_conv__input_216
+Type: depthwise-conv2d-fix
+Tensor: CGNet__CGNet_ContextGuidedBlock_stage3_12_
+__BNLeakyReLU_reduction_bnlr__ReLU_leakyrelu__1998
+_inserted_fix_37
+Shape: {1, 34, 46, 64}"];
+182 -> 349;
+183 -> 349;
+}
+subgraph clustersubgraph78 {
+graph [
+label=subgraph_CGNet__CGNet_ContextGuidedBlock_stage3_12___FGlo1_f_glo1__Conv2d_fc1__input_219];
+node [
+shape=box, style=rounded, width=x];
+184[label="Name: CGNet__stage3_12_f_glo1_fc1_weight
+Type: const-fix
+Tensor: CGNet__stage3_12_f_glo1_fc1_weight_fix
+Shape: {8, 1, 1, 128}"];
+185[label="Name: CGNet__stage3_12_f_glo1_fc1_bias
+Type: const-fix
+Tensor: CGNet__stage3_12_f_glo1_fc1_bias_fix
+Shape: {8}"];
+351[label="Name: CGNet__CGNet_ContextGuidedBlock_stage3_12___F
+Glo1_f_glo1__Conv2d_fc1__input_219
+Type: conv2d-fix
+Tensor: CGNet__CGNet_ContextGuidedBlock_stage3_12_
+__FGlo1_f_glo1__ReLU_relu__input_220_fix
+Shape: {1, 34, 46, 8}"];
+184 -> 351;
+185 -> 351;
+}
+subgraph clustersubgraph79 {
+graph [
+label=subgraph_CGNet__CGNet_ContextGuidedBlock_stage3_12___FGlo1_f_glo1__Conv2d_fc2__input_221];
+node [
+shape=box, style=rounded, width=x];
+186[label="Name: CGNet__stage3_12_f_glo1_fc2_weight
+Type: const-fix
+Tensor: CGNet__stage3_12_f_glo1_fc2_weight_fix
+Shape: {128, 1, 1, 8}"];
+187[label="Name: CGNet__stage3_12_f_glo1_fc2_bias
+Type: const-fix
+Tensor: CGNet__stage3_12_f_glo1_fc2_bias_fix
+Shape: {128}"];
+350[label="Name: CGNet__CGNet_ContextGuidedBlock_stage3_12__in
+put_222
+Type: eltwise-fix
+Tensor: CGNet__CGNet_ContextGuidedBlock_stage3_12_
+_input_222_fix
+Shape: {1, 34, 46, 128}"];
+352[label="Name: CGNet__CGNet_ContextGuidedBlock_stage3_12___F
+Glo1_f_glo1__Conv2d_fc2__input_221
+Type: conv2d-fix
+Tensor: CGNet__CGNet_ContextGuidedBlock_stage3_12_
+__FGlo1_f_glo1__Hardtanh_hardtanh__2025_fix
+Shape: {1, 34, 46, 128}"];
+186 -> 352;
+187 -> 352;
+352 -> 350;
+}
+subgraph clustersubgraph80 {
+graph [
+label=subgraph_CGNet__CGNet_ContextGuidedBlock_stage3_13___ChannelWiseConv_f_loc__Conv2d_conv__input_226];
+node [
+shape=box, style=rounded, width=x];
+188[label="Name: CGNet__stage3_13_conv_conv_weight
+Type: const-fix
+Tensor: CGNet__stage3_13_conv_conv_weight_fix
+Shape: {64, 1, 1, 128}"];
+189[label="Name: CGNet__stage3_13_conv_conv_weight_bias
+Type: const-fix
+Tensor: CGNet__stage3_13_conv_conv_weight_bias_fix
+Shape: {64}"];
+190[label="Name: CGNet__stage3_13_f_loc_conv_weight
+Type: const-fix
+Tensor: CGNet__stage3_13_f_loc_conv_weight_fix
+Shape: {1, 3, 3, 64}"];
+191[label="Name: CGNet__stage3_13_f_loc_conv_weight_bias
+Type: const-fix
+Tensor: CGNet__stage3_13_f_loc_conv_weight_bias_fi
+x
+Shape: {64}"];
+354[label="Name: CGNet__CGNet_ContextGuidedBlock_stage3_13___C
+onvBNLeakyReLU_conv__Conv2d_conv__input_223
+Type: conv2d-fix
+Tensor: CGNet__CGNet_ContextGuidedBlock_stage3_13_
+__ConvBNLeakyReLU_conv__LeakyReLU_leakyrelu__input
+_225_fix
+Shape: {1, 34, 46, 64}"];
+355[label="Name: CGNet__CGNet_ContextGuidedBlock_stage3_13___C
+hannelWiseConv_f_loc__Conv2d_conv__input_226
+Type: depthwise-conv2d-fix
+Tensor: CGNet__CGNet_ContextGuidedBlock_stage3_13_
+__BNLeakyReLU_reduction_bnlr__ReLU_leakyrelu__2073
+_inserted_fix_38
+Shape: {1, 34, 46, 64}"];
+188 -> 354;
+189 -> 354;
+190 -> 355;
+191 -> 355;
+354 -> 355;
+}
+subgraph clustersubgraph81 {
+graph [
+label=subgraph_CGNet__CGNet_ContextGuidedBlock_stage3_13___ChannelWiseConv_f_sur__Conv2d_conv__input_228];
+node [
+shape=box, style=rounded, width=x];
+192[label="Name: CGNet__stage3_13_f_sur_conv_weight
+Type: const-fix
+Tensor: CGNet__stage3_13_f_sur_conv_weight_fix
+Shape: {1, 3, 3, 64}"];
+193[label="Name: CGNet__stage3_13_f_sur_conv_weight_bias
+Type: const-fix
+Tensor: CGNet__stage3_13_f_sur_conv_weight_bias_fi
+x
+Shape: {64}"];
+356[label="Name: CGNet__CGNet_ContextGuidedBlock_stage3_13___C
+hannelWiseConv_f_sur__Conv2d_conv__input_228
+Type: depthwise-conv2d-fix
+Tensor: CGNet__CGNet_ContextGuidedBlock_stage3_13_
+__BNLeakyReLU_reduction_bnlr__ReLU_leakyrelu__2079
+_inserted_fix_39
+Shape: {1, 34, 46, 64}"];
+192 -> 356;
+193 -> 356;
+}
+subgraph clustersubgraph82 {
+graph [
+label=subgraph_CGNet__CGNet_ContextGuidedBlock_stage3_13___FGlo1_f_glo1__Conv2d_fc1__input_231];
+node [
+shape=box, style=rounded, width=x];
+194[label="Name: CGNet__stage3_13_f_glo1_fc1_weight
+Type: const-fix
+Tensor: CGNet__stage3_13_f_glo1_fc1_weight_fix
+Shape: {8, 1, 1, 128}"];
+195[label="Name: CGNet__stage3_13_f_glo1_fc1_bias
+Type: const-fix
+Tensor: CGNet__stage3_13_f_glo1_fc1_bias_fix
+Shape: {8}"];
+358[label="Name: CGNet__CGNet_ContextGuidedBlock_stage3_13___F
+Glo1_f_glo1__Conv2d_fc1__input_231
+Type: conv2d-fix
+Tensor: CGNet__CGNet_ContextGuidedBlock_stage3_13_
+__FGlo1_f_glo1__ReLU_relu__input_232_fix
+Shape: {1, 34, 46, 8}"];
+194 -> 358;
+195 -> 358;
+}
+subgraph clustersubgraph83 {
+graph [
+label=subgraph_CGNet__CGNet_ContextGuidedBlock_stage3_13___FGlo1_f_glo1__Conv2d_fc2__input_233];
+node [
+shape=box, style=rounded, width=x];
+196[label="Name: CGNet__stage3_13_f_glo1_fc2_weight
+Type: const-fix
+Tensor: CGNet__stage3_13_f_glo1_fc2_weight_fix
+Shape: {128, 1, 1, 8}"];
+197[label="Name: CGNet__stage3_13_f_glo1_fc2_bias
+Type: const-fix
+Tensor: CGNet__stage3_13_f_glo1_fc2_bias_fix
+Shape: {128}"];
+357[label="Name: CGNet__CGNet_ContextGuidedBlock_stage3_13__in
+put_234
+Type: eltwise-fix
+Tensor: CGNet__CGNet_ContextGuidedBlock_stage3_13_
+_input_234_fix
+Shape: {1, 34, 46, 128}"];
+359[label="Name: CGNet__CGNet_ContextGuidedBlock_stage3_13___F
+Glo1_f_glo1__Conv2d_fc2__input_233
+Type: conv2d-fix
+Tensor: CGNet__CGNet_ContextGuidedBlock_stage3_13_
+__FGlo1_f_glo1__Hardtanh_hardtanh__2106_fix
+Shape: {1, 34, 46, 128}"];
+196 -> 359;
+197 -> 359;
+359 -> 357;
+}
+subgraph clustersubgraph84 {
+graph [
+label=subgraph_CGNet__CGNet_ContextGuidedBlock_stage3_14___ChannelWiseConv_f_loc__Conv2d_conv__input_238];
+node [
+shape=box, style=rounded, width=x];
+198[label="Name: CGNet__stage3_14_conv_conv_weight
+Type: const-fix
+Tensor: CGNet__stage3_14_conv_conv_weight_fix
+Shape: {64, 1, 1, 128}"];
+199[label="Name: CGNet__stage3_14_conv_conv_weight_bias
+Type: const-fix
+Tensor: CGNet__stage3_14_conv_conv_weight_bias_fix
+Shape: {64}"];
+200[label="Name: CGNet__stage3_14_f_loc_conv_weight
+Type: const-fix
+Tensor: CGNet__stage3_14_f_loc_conv_weight_fix
+Shape: {1, 3, 3, 64}"];
+201[label="Name: CGNet__stage3_14_f_loc_conv_weight_bias
+Type: const-fix
+Tensor: CGNet__stage3_14_f_loc_conv_weight_bias_fi
+x
+Shape: {64}"];
+361[label="Name: CGNet__CGNet_ContextGuidedBlock_stage3_14___C
+onvBNLeakyReLU_conv__Conv2d_conv__input_235
+Type: conv2d-fix
+Tensor: CGNet__CGNet_ContextGuidedBlock_stage3_14_
+__ConvBNLeakyReLU_conv__LeakyReLU_leakyrelu__input
+_237_fix
+Shape: {1, 34, 46, 64}"];
+362[label="Name: CGNet__CGNet_ContextGuidedBlock_stage3_14___C
+hannelWiseConv_f_loc__Conv2d_conv__input_238
+Type: depthwise-conv2d-fix
+Tensor: CGNet__CGNet_ContextGuidedBlock_stage3_14_
+__BNLeakyReLU_reduction_bnlr__ReLU_leakyrelu__2154
+_inserted_fix_40
+Shape: {1, 34, 46, 64}"];
+198 -> 361;
+199 -> 361;
+200 -> 362;
+201 -> 362;
+361 -> 362;
+}
+subgraph clustersubgraph85 {
+graph [
+label=subgraph_CGNet__CGNet_ContextGuidedBlock_stage3_14___ChannelWiseConv_f_sur__Conv2d_conv__input_240];
+node [
+shape=box, style=rounded, width=x];
+202[label="Name: CGNet__stage3_14_f_sur_conv_weight
+Type: const-fix
+Tensor: CGNet__stage3_14_f_sur_conv_weight_fix
+Shape: {1, 3, 3, 64}"];
+203[label="Name: CGNet__stage3_14_f_sur_conv_weight_bias
+Type: const-fix
+Tensor: CGNet__stage3_14_f_sur_conv_weight_bias_fi
+x
+Shape: {64}"];
+363[label="Name: CGNet__CGNet_ContextGuidedBlock_stage3_14___C
+hannelWiseConv_f_sur__Conv2d_conv__input_240
+Type: depthwise-conv2d-fix
+Tensor: CGNet__CGNet_ContextGuidedBlock_stage3_14_
+__BNLeakyReLU_reduction_bnlr__ReLU_leakyrelu__2160
+_inserted_fix_41
+Shape: {1, 34, 46, 64}"];
+202 -> 363;
+203 -> 363;
+}
+subgraph clustersubgraph86 {
+graph [
+label=subgraph_CGNet__CGNet_ContextGuidedBlock_stage3_14___FGlo1_f_glo1__Conv2d_fc1__input_243];
+node [
+shape=box, style=rounded, width=x];
+204[label="Name: CGNet__stage3_14_f_glo1_fc1_weight
+Type: const-fix
+Tensor: CGNet__stage3_14_f_glo1_fc1_weight_fix
+Shape: {8, 1, 1, 128}"];
+205[label="Name: CGNet__stage3_14_f_glo1_fc1_bias
+Type: const-fix
+Tensor: CGNet__stage3_14_f_glo1_fc1_bias_fix
+Shape: {8}"];
+365[label="Name: CGNet__CGNet_ContextGuidedBlock_stage3_14___F
+Glo1_f_glo1__Conv2d_fc1__input_243
+Type: conv2d-fix
+Tensor: CGNet__CGNet_ContextGuidedBlock_stage3_14_
+__FGlo1_f_glo1__ReLU_relu__input_244_fix
+Shape: {1, 34, 46, 8}"];
+204 -> 365;
+205 -> 365;
+}
+subgraph clustersubgraph87 {
+graph [
+label=subgraph_CGNet__CGNet_ContextGuidedBlock_stage3_14___FGlo1_f_glo1__Conv2d_fc2__input_245];
+node [
+shape=box, style=rounded, width=x];
+206[label="Name: CGNet__stage3_14_f_glo1_fc2_weight
+Type: const-fix
+Tensor: CGNet__stage3_14_f_glo1_fc2_weight_fix
+Shape: {128, 1, 1, 8}"];
+207[label="Name: CGNet__stage3_14_f_glo1_fc2_bias
+Type: const-fix
+Tensor: CGNet__stage3_14_f_glo1_fc2_bias_fix
+Shape: {128}"];
+364[label="Name: CGNet__CGNet_ContextGuidedBlock_stage3_14__in
+put_246
+Type: eltwise-fix
+Tensor: CGNet__CGNet_ContextGuidedBlock_stage3_14_
+_input_246_fix
+Shape: {1, 34, 46, 128}"];
+366[label="Name: CGNet__CGNet_ContextGuidedBlock_stage3_14___F
+Glo1_f_glo1__Conv2d_fc2__input_245
+Type: conv2d-fix
+Tensor: CGNet__CGNet_ContextGuidedBlock_stage3_14_
+__FGlo1_f_glo1__Hardtanh_hardtanh__2187_fix
+Shape: {1, 34, 46, 128}"];
+206 -> 366;
+207 -> 366;
+366 -> 364;
+}
+subgraph clustersubgraph88 {
+graph [
+label=subgraph_CGNet__CGNet_ContextGuidedBlock_stage3_15___ChannelWiseConv_f_loc__Conv2d_conv__input_250];
+node [
+shape=box, style=rounded, width=x];
+208[label="Name: CGNet__stage3_15_conv_conv_weight
+Type: const-fix
+Tensor: CGNet__stage3_15_conv_conv_weight_fix
+Shape: {64, 1, 1, 128}"];
+209[label="Name: CGNet__stage3_15_conv_conv_weight_bias
+Type: const-fix
+Tensor: CGNet__stage3_15_conv_conv_weight_bias_fix
+Shape: {64}"];
+210[label="Name: CGNet__stage3_15_f_loc_conv_weight
+Type: const-fix
+Tensor: CGNet__stage3_15_f_loc_conv_weight_fix
+Shape: {1, 3, 3, 64}"];
+211[label="Name: CGNet__stage3_15_f_loc_conv_weight_bias
+Type: const-fix
+Tensor: CGNet__stage3_15_f_loc_conv_weight_bias_fi
+x
+Shape: {64}"];
+368[label="Name: CGNet__CGNet_ContextGuidedBlock_stage3_15___C
+onvBNLeakyReLU_conv__Conv2d_conv__input_247
+Type: conv2d-fix
+Tensor: CGNet__CGNet_ContextGuidedBlock_stage3_15_
+__ConvBNLeakyReLU_conv__LeakyReLU_leakyrelu__input
+_249_fix
+Shape: {1, 34, 46, 64}"];
+369[label="Name: CGNet__CGNet_ContextGuidedBlock_stage3_15___C
+hannelWiseConv_f_loc__Conv2d_conv__input_250
+Type: depthwise-conv2d-fix
+Tensor: CGNet__CGNet_ContextGuidedBlock_stage3_15_
+__BNLeakyReLU_reduction_bnlr__ReLU_leakyrelu__2235
+_inserted_fix_42
+Shape: {1, 34, 46, 64}"];
+208 -> 368;
+209 -> 368;
+210 -> 369;
+211 -> 369;
+368 -> 369;
+}
+subgraph clustersubgraph89 {
+graph [
+label=subgraph_CGNet__CGNet_ContextGuidedBlock_stage3_15___ChannelWiseConv_f_sur__Conv2d_conv__input_252];
+node [
+shape=box, style=rounded, width=x];
+212[label="Name: CGNet__stage3_15_f_sur_conv_weight
+Type: const-fix
+Tensor: CGNet__stage3_15_f_sur_conv_weight_fix
+Shape: {1, 3, 3, 64}"];
+213[label="Name: CGNet__stage3_15_f_sur_conv_weight_bias
+Type: const-fix
+Tensor: CGNet__stage3_15_f_sur_conv_weight_bias_fi
+x
+Shape: {64}"];
+370[label="Name: CGNet__CGNet_ContextGuidedBlock_stage3_15___C
+hannelWiseConv_f_sur__Conv2d_conv__input_252
+Type: depthwise-conv2d-fix
+Tensor: CGNet__CGNet_ContextGuidedBlock_stage3_15_
+__BNLeakyReLU_reduction_bnlr__ReLU_leakyrelu__2241
+_inserted_fix_43
+Shape: {1, 34, 46, 64}"];
+212 -> 370;
+213 -> 370;
+}
+subgraph clustersubgraph90 {
+graph [
+label=subgraph_CGNet__CGNet_ContextGuidedBlock_stage3_15___FGlo1_f_glo1__Conv2d_fc1__input_255];
+node [
+shape=box, style=rounded, width=x];
+214[label="Name: CGNet__stage3_15_f_glo1_fc1_weight
+Type: const-fix
+Tensor: CGNet__stage3_15_f_glo1_fc1_weight_fix
+Shape: {8, 1, 1, 128}"];
+215[label="Name: CGNet__stage3_15_f_glo1_fc1_bias
+Type: const-fix
+Tensor: CGNet__stage3_15_f_glo1_fc1_bias_fix
+Shape: {8}"];
+372[label="Name: CGNet__CGNet_ContextGuidedBlock_stage3_15___F
+Glo1_f_glo1__Conv2d_fc1__input_255
+Type: conv2d-fix
+Tensor: CGNet__CGNet_ContextGuidedBlock_stage3_15_
+__FGlo1_f_glo1__ReLU_relu__input_256_fix
+Shape: {1, 34, 46, 8}"];
+214 -> 372;
+215 -> 372;
+}
+subgraph clustersubgraph91 {
+graph [
+label=subgraph_CGNet__CGNet_ContextGuidedBlock_stage3_15__2270];
+node [
+shape=box, style=rounded, width=x];
+216[label="Name: CGNet__stage3_15_f_glo1_fc2_weight
+Type: const-fix
+Tensor: CGNet__stage3_15_f_glo1_fc2_weight_fix
+Shape: {128, 1, 1, 8}"];
+217[label="Name: CGNet__stage3_15_f_glo1_fc2_bias
+Type: const-fix
+Tensor: CGNet__stage3_15_f_glo1_fc2_bias_fix
+Shape: {128}"];
+371[label="Name: CGNet__CGNet_ContextGuidedBlock_stage3_15__22
+70
+Type: eltwise-fix
+Tensor: CGNet__CGNet_ContextGuidedBlock_stage3_15_
+_2270_inserted_fix_44
+Shape: {1, 34, 46, 128}"];
+373[label="Name: CGNet__CGNet_ContextGuidedBlock_stage3_15___F
+Glo1_f_glo1__Conv2d_fc2__input_257
+Type: conv2d-fix
+Tensor: CGNet__CGNet_ContextGuidedBlock_stage3_15_
+__FGlo1_f_glo1__Hardtanh_hardtanh__2268_fix
+Shape: {1, 34, 46, 128}"];
+216 -> 373;
+217 -> 373;
+373 -> 371;
+}
+subgraph clustersubgraph92 {
+graph [
+label=subgraph_CGNet__CGNet_Sequential_head__Conv2d_1__2286];
+node [
+shape=box, style=rounded, width=x];
+218[label="Name: CGNet__head_1_weight
+Type: const-fix
+Tensor: CGNet__head_1_weight_fix
+Shape: {1, 1, 1, 256}"];
+219[label="Name: CGNet__head_1_bias
+Type: const-fix
+Tensor: CGNet__head_1_bias_fix
+Shape: {1}"];
+376[label="Name: CGNet__CGNet_Sequential_head__Conv2d_1__2286
+Type: conv2d-fix
+Tensor: CGNet__CGNet_Sequential_head__Conv2d_1__22
+86_fix_download_0
+Shape: {1, 34, 46, 1}"];
+218 -> 376;
+219 -> 376;
+}
+subgraph clustersubgraph93 {
+graph [
+label=subgraph_CGNet__input_0_upload_0];
+node [
+shape=box, style=rounded, width=x];
+221[label="Name: CGNet__input_0_upload_0
+Type: upload
+Tensor: CGNet__input_0_fix_upload_0
+Shape: {1, 1088, 1456, 3}"];
+}
+subgraph clustersubgraph94 {
+graph [
+label=subgraph_CGNet__CGNet__InputInjection_sample1__AvgPool2d_pool__ModuleList_0__600_i0];
+node [
+shape=box, style=rounded, width=x];
+222[label="Name: CGNet__CGNet__InputInjection_sample1__AvgPool
+2d_pool__ModuleList_0__600_i0
+Type: pool-fix
+Tensor: CGNet__CGNet__InputInjection_sample1__AvgP
+ool2d_pool__ModuleList_0__600_inserted_fix_1
+Shape: {1, 136, 182, 3}"];
+}
+subgraph clustersubgraph95 {
+graph [
+label=subgraph_CGNet__CGNet_Conv2d_stage_0_conv_0__input_2];
+node [
+shape=box, style=rounded, width=x];
+4[label="Name: CGNet__stage_0_conv_0_weight
+Type: const-fix
+Tensor: CGNet__stage_0_conv_0_weight_fix
+Shape: {3, 4, 1, 3}"];
+5[label="Name: CGNet__stage_0_conv_0_bias
+Type: const-fix
+Tensor: CGNet__stage_0_conv_0_bias_fix
+Shape: {3}"];
+223[label="Name: CGNet__CGNet_Conv2d_stage_0_conv_0__input_2
+Type: conv2d-fix
+Tensor: CGNet__CGNet_Conv2d_stage_0_conv_0__input_
+2_fix
+Shape: {1, 272, 1456, 3}"];
+4 -> 223;
+5 -> 223;
+}
+subgraph clustersubgraph96 {
+graph [
+label=subgraph_CGNet__CGNet_Conv2d_stage_0_conv_1__input_3];
+node [
+shape=box, style=rounded, width=x];
+6[label="Name: CGNet__stage_0_conv_1_weight
+Type: const-fix
+Tensor: CGNet__stage_0_conv_1_weight_fix
+Shape: {3, 1, 4, 3}"];
+7[label="Name: CGNet__stage_0_conv_1_bias
+Type: const-fix
+Tensor: CGNet__stage_0_conv_1_bias_fix
+Shape: {3}"];
+224[label="Name: CGNet__CGNet_Conv2d_stage_0_conv_1__input_3
+Type: conv2d-fix
+Tensor: CGNet__CGNet_Conv2d_stage_0_conv_1__input_
+3_fix
+Shape: {1, 272, 364, 3}"];
+258[label="Name: CGNet__CGNet__InputInjection_sample2__AvgPool
+2d_pool__ModuleList_0__607_i0
+Type: pool-fix
+Tensor: CGNet__CGNet__InputInjection_sample2__AvgP
+ool2d_pool__ModuleList_0__607_fix
+Shape: {1, 136, 182, 3}"];
+6 -> 224;
+7 -> 224;
+224 -> 258;
+}
+subgraph clustersubgraph97 {
+graph [
+label=subgraph_CGNet__CGNet__ConvBNLeakyReLU_stage1_0__Conv2d_conv__input_4];
+node [
+shape=box, style=rounded, width=x];
+8[label="Name: CGNet__stage1_0_conv_weight
+Type: const-fix
+Tensor: CGNet__stage1_0_conv_weight_fix
+Shape: {32, 3, 3, 3}"];
+9[label="Name: CGNet__stage1_0_conv_weight_bias
+Type: const-fix
+Tensor: CGNet__stage1_0_conv_weight_bias_fix
+Shape: {32}"];
+225[label="Name: CGNet__CGNet__ConvBNLeakyReLU_stage1_0__Conv2
+d_conv__input_4
+Type: conv2d-fix
+Tensor: CGNet__CGNet__ConvBNLeakyReLU_stage1_0__Le
+akyReLU_leakyrelu__input_6_fix
+Shape: {1, 136, 182, 32}"];
+8 -> 225;
+9 -> 225;
+}
+subgraph clustersubgraph98 {
+graph [
+label=subgraph_CGNet__CGNet_input_12];
+node [
+shape=box, style=rounded, width=x];
+228[label="Name: CGNet__CGNet_input_12
+Type: concat-fix
+Tensor: CGNet__CGNet_input_12_fix_reshaped_inserte
+d_fix_45
+Shape: {1, 136, 182, 35}"];
+}
+subgraph clustersubgraph99 {
+graph [
+label=subgraph_CGNet__CGNet_ContextGuidedBlock_stage2_0__input_22];
+node [
+shape=box, style=rounded, width=x];
+229[label="Name: CGNet__CGNet_ContextGuidedBlock_stage2_0__inp
+ut_22
+Type: concat-fix
+Tensor: CGNet__CGNet_ContextGuidedBlock_stage2_0__
+input_22_fix
+Shape: {1, 68, 91, 128}"];
+}
+subgraph clustersubgraph100 {
+graph [
+label=subgraph_CGNet__CGNet_ContextGuidedBlock_stage2_1__input_35];
+node [
+shape=box, style=rounded, width=x];
+234[label="Name: CGNet__CGNet_ContextGuidedBlock_stage2_1__inp
+ut_35
+Type: concat-fix
+Tensor: CGNet__CGNet_ContextGuidedBlock_stage2_1__
+input_35_fix
+Shape: {1, 68, 91, 64}"];
+}
+subgraph clustersubgraph101 {
+graph [
+label=subgraph_CGNet__CGNet_ContextGuidedBlock_stage2_2__input_47];
+node [
+shape=box, style=rounded, width=x];
+244[label="Name: CGNet__CGNet_ContextGuidedBlock_stage2_2__inp
+ut_47
+Type: concat-fix
+Tensor: CGNet__CGNet_ContextGuidedBlock_stage2_2__
+input_47_fix
+Shape: {1, 68, 91, 64}"];
+}
+subgraph clustersubgraph102 {
+graph [
+label=subgraph_CGNet__CGNet_ContextGuidedBlock_stage3_10___ChannelWiseConv_f_loc__Conv2d_conv__input_190];
+node [
+shape=box, style=rounded, width=x];
+158[label="Name: CGNet__stage3_10_conv_conv_weight
+Type: const-fix
+Tensor: CGNet__stage3_10_conv_conv_weight_fix
+Shape: {64, 1, 1, 128}"];
+159[label="Name: CGNet__stage3_10_conv_conv_weight_bias
+Type: const-fix
+Tensor: CGNet__stage3_10_conv_conv_weight_bias_fix
+Shape: {64}"];
+160[label="Name: CGNet__stage3_10_f_loc_conv_weight
+Type: const-fix
+Tensor: CGNet__stage3_10_f_loc_conv_weight_fix
+Shape: {1, 3, 3, 64}"];
+161[label="Name: CGNet__stage3_10_f_loc_conv_weight_bias
+Type: const-fix
+Tensor: CGNet__stage3_10_f_loc_conv_weight_bias_fi
+x
+Shape: {64}"];
+333[label="Name: CGNet__CGNet_ContextGuidedBlock_stage3_10___C
+onvBNLeakyReLU_conv__Conv2d_conv__input_187
+Type: conv2d-fix
+Tensor: CGNet__CGNet_ContextGuidedBlock_stage3_10_
+__ConvBNLeakyReLU_conv__LeakyReLU_leakyrelu__input
+_189_fix
+Shape: {1, 34, 46, 64}"];
+334[label="Name: CGNet__CGNet_ContextGuidedBlock_stage3_10___C
+hannelWiseConv_f_loc__Conv2d_conv__input_190
+Type: depthwise-conv2d-fix
+Tensor: CGNet__CGNet_ContextGuidedBlock_stage3_10_
+__BNLeakyReLU_reduction_bnlr__ReLU_leakyrelu__1830
+_inserted_fix_32
+Shape: {1, 34, 46, 64}"];
+158 -> 333;
+159 -> 333;
+160 -> 334;
+161 -> 334;
+333 -> 334;
+}
+subgraph clustersubgraph103 {
+graph [
+label=subgraph_CGNet__CGNet_ContextGuidedBlock_stage3_10___ChannelWiseConv_f_sur__Conv2d_conv__input_192];
+node [
+shape=box, style=rounded, width=x];
+162[label="Name: CGNet__stage3_10_f_sur_conv_weight
+Type: const-fix
+Tensor: CGNet__stage3_10_f_sur_conv_weight_fix
+Shape: {1, 3, 3, 64}"];
+163[label="Name: CGNet__stage3_10_f_sur_conv_weight_bias
+Type: const-fix
+Tensor: CGNet__stage3_10_f_sur_conv_weight_bias_fi
+x
+Shape: {64}"];
+335[label="Name: CGNet__CGNet_ContextGuidedBlock_stage3_10___C
+hannelWiseConv_f_sur__Conv2d_conv__input_192
+Type: depthwise-conv2d-fix
+Tensor: CGNet__CGNet_ContextGuidedBlock_stage3_10_
+__BNLeakyReLU_reduction_bnlr__ReLU_leakyrelu__1836
+_inserted_fix_33
+Shape: {1, 34, 46, 64}"];
+162 -> 335;
+163 -> 335;
+}
+subgraph clustersubgraph104 {
+graph [
+label=subgraph_CGNet__CGNet_ContextGuidedBlock_stage3_10___FGlo1_f_glo1__Conv2d_fc1__input_195];
+node [
+shape=box, style=rounded, width=x];
+164[label="Name: CGNet__stage3_10_f_glo1_fc1_weight
+Type: const-fix
+Tensor: CGNet__stage3_10_f_glo1_fc1_weight_fix
+Shape: {8, 1, 1, 128}"];
+165[label="Name: CGNet__stage3_10_f_glo1_fc1_bias
+Type: const-fix
+Tensor: CGNet__stage3_10_f_glo1_fc1_bias_fix
+Shape: {8}"];
+337[label="Name: CGNet__CGNet_ContextGuidedBlock_stage3_10___F
+Glo1_f_glo1__Conv2d_fc1__input_195
+Type: conv2d-fix
+Tensor: CGNet__CGNet_ContextGuidedBlock_stage3_10_
+__FGlo1_f_glo1__ReLU_relu__input_196_fix
+Shape: {1, 34, 46, 8}"];
+164 -> 337;
+165 -> 337;
+}
+subgraph clustersubgraph105 {
+graph [
+label=subgraph_CGNet__CGNet_ContextGuidedBlock_stage3_10___FGlo1_f_glo1__Conv2d_fc2__input_197];
+node [
+shape=box, style=rounded, width=x];
+166[label="Name: CGNet__stage3_10_f_glo1_fc2_weight
+Type: const-fix
+Tensor: CGNet__stage3_10_f_glo1_fc2_weight_fix
+Shape: {128, 1, 1, 8}"];
+167[label="Name: CGNet__stage3_10_f_glo1_fc2_bias
+Type: const-fix
+Tensor: CGNet__stage3_10_f_glo1_fc2_bias_fix
+Shape: {128}"];
+336[label="Name: CGNet__CGNet_ContextGuidedBlock_stage3_10__in
+put_198
+Type: eltwise-fix
+Tensor: CGNet__CGNet_ContextGuidedBlock_stage3_10_
+_input_198_fix
+Shape: {1, 34, 46, 128}"];
+338[label="Name: CGNet__CGNet_ContextGuidedBlock_stage3_10___F
+Glo1_f_glo1__Conv2d_fc2__input_197
+Type: conv2d-fix
+Tensor: CGNet__CGNet_ContextGuidedBlock_stage3_10_
+__FGlo1_f_glo1__Hardtanh_hardtanh__1863_fix
+Shape: {1, 34, 46, 128}"];
+166 -> 338;
+167 -> 338;
+338 -> 336;
+}
+subgraph clustersubgraph106 {
+graph [
+label=subgraph_CGNet__CGNet_ContextGuidedBlock_stage3_11___ChannelWiseConv_f_loc__Conv2d_conv__input_202];
+node [
+shape=box, style=rounded, width=x];
+168[label="Name: CGNet__stage3_11_conv_conv_weight
+Type: const-fix
+Tensor: CGNet__stage3_11_conv_conv_weight_fix
+Shape: {64, 1, 1, 128}"];
+169[label="Name: CGNet__stage3_11_conv_conv_weight_bias
+Type: const-fix
+Tensor: CGNet__stage3_11_conv_conv_weight_bias_fix
+Shape: {64}"];
+170[label="Name: CGNet__stage3_11_f_loc_conv_weight
+Type: const-fix
+Tensor: CGNet__stage3_11_f_loc_conv_weight_fix
+Shape: {1, 3, 3, 64}"];
+171[label="Name: CGNet__stage3_11_f_loc_conv_weight_bias
+Type: const-fix
+Tensor: CGNet__stage3_11_f_loc_conv_weight_bias_fi
+x
+Shape: {64}"];
+340[label="Name: CGNet__CGNet_ContextGuidedBlock_stage3_11___C
+onvBNLeakyReLU_conv__Conv2d_conv__input_199
+Type: conv2d-fix
+Tensor: CGNet__CGNet_ContextGuidedBlock_stage3_11_
+__ConvBNLeakyReLU_conv__LeakyReLU_leakyrelu__input
+_201_fix
+Shape: {1, 34, 46, 64}"];
+341[label="Name: CGNet__CGNet_ContextGuidedBlock_stage3_11___C
+hannelWiseConv_f_loc__Conv2d_conv__input_202
+Type: depthwise-conv2d-fix
+Tensor: CGNet__CGNet_ContextGuidedBlock_stage3_11_
+__BNLeakyReLU_reduction_bnlr__ReLU_leakyrelu__1911
+_inserted_fix_34
+Shape: {1, 34, 46, 64}"];
+168 -> 340;
+169 -> 340;
+170 -> 341;
+171 -> 341;
+340 -> 341;
+}
+subgraph clustersubgraph107 {
+graph [
+label=subgraph_CGNet__CGNet_ContextGuidedBlock_stage3_11___ChannelWiseConv_f_sur__Conv2d_conv__input_204];
+node [
+shape=box, style=rounded, width=x];
+172[label="Name: CGNet__stage3_11_f_sur_conv_weight
+Type: const-fix
+Tensor: CGNet__stage3_11_f_sur_conv_weight_fix
+Shape: {1, 3, 3, 64}"];
+173[label="Name: CGNet__stage3_11_f_sur_conv_weight_bias
+Type: const-fix
+Tensor: CGNet__stage3_11_f_sur_conv_weight_bias_fi
+x
+Shape: {64}"];
+342[label="Name: CGNet__CGNet_ContextGuidedBlock_stage3_11___C
+hannelWiseConv_f_sur__Conv2d_conv__input_204
+Type: depthwise-conv2d-fix
+Tensor: CGNet__CGNet_ContextGuidedBlock_stage3_11_
+__BNLeakyReLU_reduction_bnlr__ReLU_leakyrelu__1917
+_inserted_fix_35
+Shape: {1, 34, 46, 64}"];
+172 -> 342;
+173 -> 342;
+}
+subgraph clustersubgraph108 {
+graph [
+label=subgraph_CGNet__CGNet_ContextGuidedBlock_stage3_11___FGlo1_f_glo1__Conv2d_fc1__input_207];
+node [
+shape=box, style=rounded, width=x];
+174[label="Name: CGNet__stage3_11_f_glo1_fc1_weight
+Type: const-fix
+Tensor: CGNet__stage3_11_f_glo1_fc1_weight_fix
+Shape: {8, 1, 1, 128}"];
+175[label="Name: CGNet__stage3_11_f_glo1_fc1_bias
+Type: const-fix
+Tensor: CGNet__stage3_11_f_glo1_fc1_bias_fix
+Shape: {8}"];
+344[label="Name: CGNet__CGNet_ContextGuidedBlock_stage3_11___F
+Glo1_f_glo1__Conv2d_fc1__input_207
+Type: conv2d-fix
+Tensor: CGNet__CGNet_ContextGuidedBlock_stage3_11_
+__FGlo1_f_glo1__ReLU_relu__input_208_fix
+Shape: {1, 34, 46, 8}"];
+174 -> 344;
+175 -> 344;
+}
+subgraph clustersubgraph109 {
+graph [
+label=subgraph_CGNet__CGNet_ContextGuidedBlock_stage3_11___FGlo1_f_glo1__Conv2d_fc2__input_209];
+node [
+shape=box, style=rounded, width=x];
+176[label="Name: CGNet__stage3_11_f_glo1_fc2_weight
+Type: const-fix
+Tensor: CGNet__stage3_11_f_glo1_fc2_weight_fix
+Shape: {128, 1, 1, 8}"];
+177[label="Name: CGNet__stage3_11_f_glo1_fc2_bias
+Type: const-fix
+Tensor: CGNet__stage3_11_f_glo1_fc2_bias_fix
+Shape: {128}"];
+343[label="Name: CGNet__CGNet_ContextGuidedBlock_stage3_11__in
+put_210
+Type: eltwise-fix
+Tensor: CGNet__CGNet_ContextGuidedBlock_stage3_11_
+_input_210_fix
+Shape: {1, 34, 46, 128}"];
+345[label="Name: CGNet__CGNet_ContextGuidedBlock_stage3_11___F
+Glo1_f_glo1__Conv2d_fc2__input_209
+Type: conv2d-fix
+Tensor: CGNet__CGNet_ContextGuidedBlock_stage3_11_
+__FGlo1_f_glo1__Hardtanh_hardtanh__1944_fix
+Shape: {1, 34, 46, 128}"];
+176 -> 345;
+177 -> 345;
+345 -> 343;
+}
+subgraph clustersubgraph110 {
+graph [
+label=subgraph_CGNet__CGNet_ContextGuidedBlock_stage3_10__input_194];
+node [
+shape=box, style=rounded, width=x];
+332[label="Name: CGNet__CGNet_ContextGuidedBlock_stage3_10__in
+put_194
+Type: concat-fix
+Tensor: CGNet__CGNet_ContextGuidedBlock_stage3_10_
+_input_194_fix
+Shape: {1, 34, 46, 128}"];
+}
+subgraph clustersubgraph111 {
+graph [
+label=subgraph_CGNet__CGNet_ContextGuidedBlock_stage3_11__input_206];
+node [
+shape=box, style=rounded, width=x];
+339[label="Name: CGNet__CGNet_ContextGuidedBlock_stage3_11__in
+put_206
+Type: concat-fix
+Tensor: CGNet__CGNet_ContextGuidedBlock_stage3_11_
+_input_206_fix
+Shape: {1, 34, 46, 128}"];
+}
+subgraph clustersubgraph112 {
+graph [
+label=subgraph_CGNet__CGNet_ContextGuidedBlock_stage3_12__input_218];
+node [
+shape=box, style=rounded, width=x];
+346[label="Name: CGNet__CGNet_ContextGuidedBlock_stage3_12__in
+put_218
+Type: concat-fix
+Tensor: CGNet__CGNet_ContextGuidedBlock_stage3_12_
+_input_218_fix
+Shape: {1, 34, 46, 128}"];
+}
+subgraph clustersubgraph113 {
+graph [
+label=subgraph_CGNet__CGNet_ContextGuidedBlock_stage3_13__input_230];
+node [
+shape=box, style=rounded, width=x];
+353[label="Name: CGNet__CGNet_ContextGuidedBlock_stage3_13__in
+put_230
+Type: concat-fix
+Tensor: CGNet__CGNet_ContextGuidedBlock_stage3_13_
+_input_230_fix
+Shape: {1, 34, 46, 128}"];
+}
+subgraph clustersubgraph114 {
+graph [
+label=subgraph_CGNet__CGNet_ContextGuidedBlock_stage3_14__input_242];
+node [
+shape=box, style=rounded, width=x];
+360[label="Name: CGNet__CGNet_ContextGuidedBlock_stage3_14__in
+put_242
+Type: concat-fix
+Tensor: CGNet__CGNet_ContextGuidedBlock_stage3_14_
+_input_242_fix
+Shape: {1, 34, 46, 128}"];
+}
+subgraph clustersubgraph115 {
+graph [
+label=subgraph_CGNet__CGNet_ContextGuidedBlock_stage3_15__input_254];
+node [
+shape=box, style=rounded, width=x];
+367[label="Name: CGNet__CGNet_ContextGuidedBlock_stage3_15__in
+put_254
+Type: concat-fix
+Tensor: CGNet__CGNet_ContextGuidedBlock_stage3_15_
+_input_254_fix
+Shape: {1, 34, 46, 128}"];
+}
+subgraph clustersubgraph116 {
+graph [
+label=subgraph_CGNet__CGNet_input_258];
+node [
+shape=box, style=rounded, width=x];
+374[label="Name: CGNet__CGNet_input_258
+Type: concat-fix
+Tensor: CGNet__CGNet_input_258_fix
+Shape: {1, 34, 46, 256}"];
+}
+subgraph clustersubgraph117 {
+graph [
+label=subgraph_CGNet__CGNet_Sequential_head__Conv2d_1__2286_download_0];
+node [
+shape=box, style=rounded, width=x];
+375[label="Name: CGNet__CGNet_Sequential_head__Conv2d_1__2286_
+download_0
+Type: download
+Tensor: CGNet__CGNet_Sequential_head__Conv2d_1__22
+86_fix
+Shape: {1, 34, 46, 1}"];
+}
+221 -> 223;
+222 -> 228;
+223 -> 224;
+224 -> 222;
+224 -> 225;
+225 -> 226;
+226 -> 227;
+227 -> 228;
+228 -> 230;
+229 -> 235;
+230 -> 231;
+231 -> 233;
+232 -> 229;
+233 -> 229;
+234 -> 242;
+235 -> 236;
+236 -> 237;
+237 -> 238;
+237 -> 241;
+237 -> 260;
+238 -> 240;
+239 -> 234;
+240 -> 234;
+241 -> 245;
+241 -> 248;
+242 -> 243;
+244 -> 249;
+245 -> 247;
+246 -> 244;
+247 -> 244;
+248 -> 252;
+248 -> 255;
+249 -> 250;
+251 -> 256;
+252 -> 254;
+253 -> 251;
+254 -> 251;
+255 -> 260;
+256 -> 257;
+258 -> 259;
+259 -> 260;
+260 -> 262;
+261 -> 267;
+262 -> 263;
+263 -> 265;
+264 -> 261;
+265 -> 261;
+266 -> 274;
+267 -> 268;
+268 -> 269;
+269 -> 270;
+269 -> 273;
+269 -> 374;
+270 -> 272;
+271 -> 266;
+272 -> 266;
+273 -> 277;
+273 -> 280;
+274 -> 275;
+276 -> 281;
+277 -> 279;
+278 -> 276;
+279 -> 276;
+280 -> 284;
+280 -> 287;
+281 -> 282;
+283 -> 288;
+284 -> 286;
+285 -> 283;
+286 -> 283;
+287 -> 291;
+287 -> 294;
+288 -> 289;
+290 -> 295;
+291 -> 293;
+292 -> 290;
+293 -> 290;
+294 -> 298;
+294 -> 301;
+295 -> 296;
+297 -> 302;
+298 -> 300;
+299 -> 297;
+300 -> 297;
+301 -> 305;
+301 -> 308;
+302 -> 303;
+304 -> 309;
+305 -> 307;
+306 -> 304;
+307 -> 304;
+308 -> 312;
+308 -> 315;
+309 -> 310;
+311 -> 316;
+312 -> 314;
+313 -> 311;
+314 -> 311;
+315 -> 319;
+315 -> 322;
+316 -> 317;
+318 -> 323;
+319 -> 321;
+320 -> 318;
+321 -> 318;
+322 -> 326;
+322 -> 329;
+323 -> 324;
+325 -> 330;
+326 -> 328;
+327 -> 325;
+328 -> 325;
+329 -> 333;
+329 -> 336;
+330 -> 331;
+332 -> 337;
+333 -> 335;
+334 -> 332;
+335 -> 332;
+336 -> 340;
+336 -> 343;
+337 -> 338;
+339 -> 344;
+340 -> 342;
+341 -> 339;
+342 -> 339;
+343 -> 347;
+343 -> 350;
+344 -> 345;
+346 -> 351;
+347 -> 349;
+348 -> 346;
+349 -> 346;
+350 -> 354;
+350 -> 357;
+351 -> 352;
+353 -> 358;
+354 -> 356;
+355 -> 353;
+356 -> 353;
+357 -> 361;
+357 -> 364;
+358 -> 359;
+360 -> 365;
+361 -> 363;
+362 -> 360;
+363 -> 360;
+364 -> 368;
+364 -> 371;
+365 -> 366;
+367 -> 372;
+368 -> 370;
+369 -> 367;
+370 -> 367;
+371 -> 374;
+372 -> 373;
+374 -> 376;
+376 -> 375;
+}
+subgraph clustersubgraph118 {
+graph [
+label=subgraph_CGNet__input_0];
+node [
+color=green, shape=box, style=rounded, width=x];
+220[label="Name: CGNet__input_0
+Type: data-fix
+Tensor: CGNet__input_0_fix
+Shape: {1, 1088, 1456, 3}"];
+}
+subgraph clustersubgraph119 {
+graph [
+label=subgraph_CGNet__CGNet_Sequential_head__Conv2d_1__2286_fix_];
+node [
+color=red, shape=box, style=rounded, width=x];
+377[label="Name: CGNet__CGNet_Sequential_head__Conv2d_1__2286_
+fix_
+Type: fix2float
+Tensor: CGNet__CGNet_Sequential_head__Conv2d_1__22
+86_fix_
+Shape: {1, 34, 46, 1}"];
+}
+220 -> 221;
+375 -> 377;
+}

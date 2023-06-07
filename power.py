@@ -4,8 +4,8 @@ import torch.nn.functional as F
 import torchvision
 import numpy as np
 import matplotlib.pyplot as plt
-from cone_dataset import build_dataset, CustomDataset
-from ConeSegmentation.CGNetPy1 import CGNet, CGNetEnd
+from ConeSegmentation.cone_dataset import build_dataset, CustomDataset
+from ConeSegmentation.models.CGNet.CGNetPyVitis import CGNet, CGNetEnd
 import time 
 import pynvml
 
@@ -50,7 +50,7 @@ device = torch.device('cuda')
 model = CGNet().to(device)
 model_end = CGNetEnd().to(device)
 
-state_dict = torch.load('weights/CGNetWeights_conv_2')
+state_dict = torch.load('../weights/CGNet/CGNetWeights_conv_2')
 model.load_state_dict(state_dict)
 
 power = power_test(model, model_end, dataset, num_tests=3)

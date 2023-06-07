@@ -6,8 +6,8 @@ import torch.nn.functional as F
 import torchvision
 import numpy as np
 import matplotlib.pyplot as plt
-from cone_dataset import build_dataset, CustomDataset
-from ConeSegmentation.CGNetPy1 import CGNet, CGNetEnd
+from ConeSegmentation.cone_dataset import build_dataset, CustomDataset
+from ConeSegmentation.models.CGNet.CGNetPyVitis import CGNet, CGNetEnd
 import time 
 
 def infernece_test(model, model_end, dataset, num_tests=100, device=torch.device('cpu')):
@@ -44,7 +44,7 @@ img, mask = dataset[0]
 model = CGNet().cpu()
 model_end = CGNetEnd().cpu()
 
-state_dict = torch.load('weights/CGNetWeights_conv_2')
+state_dict = torch.load('../weights/CGNet/CGNetWeights_conv_2')
 model.load_state_dict(state_dict)
 
 time1, time2 = infernece_test(model, model_end, dataset, num_tests=400)
